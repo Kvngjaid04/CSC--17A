@@ -1,0 +1,48 @@
+Division Name: East
+Quarter: 4
+Quarterly Sales: $3
+Division Name: West
+Quarter: 4
+Quarterly Sales: $4
+Division Name: North
+Quarter: 4
+Quarterly Sales: $34
+Division Name: South
+Quarter: 4
+Quarterly Sales: $34
+Division Name: East
+Quarter: 4
+Quarterly Sales: $3
+Division Name: West
+Quarter: 4
+Quarterly Sales: $4
+Division Name: North
+Quarter: 4
+Quarterly Sales: $34
+Division Name: South
+Quarter: 4
+Quarterly Sales: $34
+Division Name: East
+Quarter: 4
+Quarterly Sales: $3
+Division Name: West
+Quarter: 4
+Quarterly Sales: $4
+Division Name: North
+Quarter: 4
+Quarterly Sales: $34
+Division Name: South
+Quarter: 4
+Quarterly Sales: $34
+Division Name: East
+Quarter: 4
+Quarterly Sales: $3
+Division Name: West
+Quarter: 4
+Quarterly Sales: $4
+Division Name: North
+Quarter: 4
+Quarterly Sales: $34
+Division Name: South
+Quarter: 4
+Quarterly Sales: $34
