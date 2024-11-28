@@ -1,0 +1,399 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{CSC\_17A/CSC-\/-\/17A/project/Project\_1\_Blackjack/main.cpp@{CSC\_17A/CSC-\/-\/17A/project/Project\_1\_Blackjack/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Author:\ Ireoluwa}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ Created\ on\ October\ 29,\ 2024,\ 12:19\ PM}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ Purpose:\ blackjack}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007\ \textcolor{comment}{//System\ Libraries}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \textcolor{comment}{//User\ Libraries}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}Blackjack.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014\ \textcolor{comment}{//Execution\ Begins\ here}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015\ \textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//Setting\ the\ random\ number\ seed}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ \ \ \ \ srand(time(0));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//Declaring\ Variables}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SIZE\ =\ 52;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deck\ size}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{struct_card}{Card}}*\ deck\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_card}{Card}}[SIZE];\ \ \textcolor{comment}{//\ Create\ deck\ array}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{int}*\ hand\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[10];\ \ \ \ \ \ \textcolor{comment}{//\ Player's\ hand\ array}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{int}*\ dHand\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[10];\ \ \ \ \ \textcolor{comment}{//\ Dealer's\ hand\ array}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ nCards\ =\ SIZE;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ cards\ in\ deck}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ pSum\ =\ 0,\ dSum\ =\ 0;\ \ \ \ \ \ \ \textcolor{comment}{//\ Player\ and\ dealer\ totals}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ nHand\ =\ 0,\ nDHand\ =\ 0;\ \ \ \ \textcolor{comment}{//\ Number\ of\ cards\ in\ each\ hand}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{struct_save}{Save}}\ user;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ User\ profile\ data}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{string}\ fname;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ file\ name}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ inzeGme(user,\ fname);\ \ \textcolor{comment}{//\ Initialize\ game}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ init(deck,\ nCards);\ \ \ \ \textcolor{comment}{//\ Initialize\ deck}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ shuf(deck,\ nCards);\ \ \ \ \textcolor{comment}{//\ Shuffle\ deck}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bet\ =\ gtBtAnt(user);\ \textcolor{comment}{//\ Get\ player's\ bet}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ dlInCrd(deck,\ nCards,\ hand,\ nHand,\ dHand,\ nDHand);\ \textcolor{comment}{//\ Deal\ initial\ cards}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ dspInDl(hand,\ nHand,\ dHand,\ deck,\ nCards);\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ initial\ hands}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ plyPrTn(deck,\ nCards,\ hand,\ nHand,\ pSum);\ \textcolor{comment}{//\ Player's\ turn}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dealer's\ turn\ if\ player\ didn't\ bust}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pSum\ <=\ 21)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ plyDrTn(deck,\ nCards,\ dHand,\ nDHand,\ dSum);\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ hndlGOt(user,\ bet,\ pSum,\ dSum);\ \textcolor{comment}{//\ Handle\ outcome}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ save(user,\ fname);\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ game\ state}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!chcGmCe(user))\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{//\ Check\ if\ player\ can\ continue}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (plyARnd())\ \{\ \ \ \textcolor{comment}{//\ Reset\ if\ player\ wants\ to\ play\ again}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ nHand\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ nDHand\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ nCards\ =\ SIZE;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});\ \ \ \textcolor{comment}{//\ Game\ loop}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ cNuGame(deck,\ hand,\ dHand);\ \ \textcolor{comment}{//\ Clean\ up\ memory}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064\ \textcolor{comment}{//\ Function\ prototype\ to\ initialize\ a\ new\ game\ or\ load\ a\ previous\ game}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065\ \textcolor{keywordtype}{void}\ inzeGme(\mbox{\hyperlink{struct_save}{Save}}\&\ user,\ \textcolor{keywordtype}{string}\&\ fname)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{char}\ resp;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Want\ to\ load\ a\ save\ file?\ (y/n):\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00068}00068\ \ \ \ \ cin\ >>\ resp;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00069}00069\ \ \ \ \ clrBuf();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (resp\ ==\ \textcolor{charliteral}{'y'})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hdSVFLd(user,\ fname))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ dpUsrSt(user);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ crtNwUr(user,\ fname);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00077}00077\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ crtNwUr(user,\ fname);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00082}00082\ \textcolor{comment}{//\ Function\ prototype\ to\ handle\ loading\ of\ save\ file\ if\ it\ exists}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00083}00083\ \textcolor{keywordtype}{bool}\ hdSVFLd(\mbox{\hyperlink{struct_save}{Save}}\&\ user,\ \textcolor{keywordtype}{string}\&\ fname)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ username\ to\ load:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ getline(cin,\ fname);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00087}00087\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!vName(fname));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00088}00088\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (load(user,\ fname))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00092}00092\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Save\ file\ not\ found.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00096}00096\ \textcolor{comment}{//\ Function\ prototype\ to\ create\ a\ new\ user\ profile}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00097}00097\ \textcolor{keywordtype}{void}\ crtNwUr(\mbox{\hyperlink{struct_save}{Save}}\&\ user,\ \textcolor{keywordtype}{string}\&\ fname)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ username\ (3-\/30\ chars,\ alphanumeric):\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ getline(cin,\ fname);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00101}00101\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!vName(fname));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00102}00102\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00103}00103\ \ \ \ \ strncpy(user.name,\ fname.c\_str(),\ 29);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00104}00104\ \ \ \ \ user.name[29]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00105}00105\ \ \ \ \ user.wins\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00106}00106\ \ \ \ \ user.games\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00107}00107\ \ \ \ \ user.cash\ =\ 1000;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00108}00108\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nWelcome\ "{}}\ <<\ user.name\ <<\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00109}00109\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Starting\ cash:\ \$"{}}\ <<\ user.cash\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00112}00112\ \textcolor{comment}{//\ Function\ prototype\ to\ display\ user\ stats}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00113}00113\ \textcolor{keywordtype}{void}\ dpUsrSt(\mbox{\hyperlink{struct_save}{Save}}\&\ user)\ \{\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00114}00114\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nWelcome\ back\ "{}}\ <<\ user.name\ <<\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00115}00115\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Stats\ from\ last\ game:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00116}00116\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Wins:\ "{}}\ <<\ setw(5)\ <<\ user.wins\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00117}00117\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Games:\ "{}}\ <<\ setw(4)\ <<\ \ user.games\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00118}00118\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cash:\ \$"{}}\ <<\ user.cash\ <<\ endl\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00119}00119\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (user.cash\ <=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ no\ money\ left\ in\ saved\ game!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Starting\ new\ game\ with\ fresh\ bankroll.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ user.cash\ =\ 1000;\ \ \textcolor{comment}{//\ Reset\ cash\ to\ 1000}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00127}00127\ \textcolor{comment}{//\ Function\ prototype\ to\ get\ the\ player's\ betting\ amount}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00128}00128\ \textcolor{keywordtype}{int}\ gtBtAnt(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_save}{Save}}\&\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordtype}{int}\ bet;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cash:\ \$"{}}\ <<\ user.cash\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Bet\ amount:\ \$"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(cin\ >>\ bet))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ bet.\ Enter\ a\ number.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ clrBuf();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ bet\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bet\ >\ user.cash)\ cout\ <<\ \textcolor{stringliteral}{"{}Can't\ bet\ more\ than\ you\ have!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bet\ <\ 1)\ cout\ <<\ \textcolor{stringliteral}{"{}Minimum\ bet\ is\ \$1\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00141}00141\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (bet\ >\ user.cash\ ||\ bet\ <\ 1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00142}00142\ \ \ \ \ clrBuf();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{return}\ bet;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00144}00144\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00146}00146\ \textcolor{comment}{//\ Function\ prototype\ to\ deal\ initial\ cards\ to\ the\ player\ and\ dealer}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00147}00147\ \textcolor{keywordtype}{void}\ dlInCrd(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\&\ nCards,\ \textcolor{keywordtype}{int}*\ hand,\ \textcolor{keywordtype}{int}\&\ nHand,\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ dHand,\ \textcolor{keywordtype}{int}\&\ nDHand)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00149}00149\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYour\ cards:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00150}00150\ \ \ \ \ hand[nHand]\ =\ draw(deck,\ nCards);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00151}00151\ \ \ \ \ pCard(hand[nHand],\ deck[nCards].suit);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00152}00152\ \ \ \ \ nHand++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00153}00153\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00154}00154\ \ \ \ \ hand[nHand]\ =\ draw(deck,\ nCards);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00155}00155\ \ \ \ \ pCard(hand[nHand],\ deck[nCards].suit);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00156}00156\ \ \ \ \ nHand++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00157}00157\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00159}00159\ \textcolor{comment}{//\ Function\ prototype\ to\ display\ the\ initial\ cards\ of\ player\ and\ dealer}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00160}00160\ \textcolor{keywordtype}{void}\ dspInDl(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}*\ hand,\ \textcolor{keywordtype}{int}\ nHand,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}*\ dHand,\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\ nCards)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00162}00162\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDealer's\ up\ card:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00163}00163\ \ \ \ \ pCard(dHand[0],\ deck[nCards].suit);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00164}00164\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Dealer's\ visible\ total:\ "{}}\ <<\ dHand[0]\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00165}00165\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00167}00167\ \textcolor{comment}{//\ Function\ prototype\ to\ play\ the\ player's\ turn}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00168}00168\ \textcolor{keywordtype}{void}\ plyPrTn(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\&\ nCards,\ \textcolor{keywordtype}{int}*\ hand,\ \textcolor{keywordtype}{int}\&\ nHand,\ \textcolor{keywordtype}{int}\&\ pSum)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00169}00169\ \ \ \ \ pSum\ =\ *sum(hand,\ nHand);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00170}00170\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYour\ total:\ "{}}\ <<\ pSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00171}00171\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{while}\ (pSum\ <\ 21\ \&\&\ hit())\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ hand[nHand]\ =\ draw(deck,\ nCards);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ drew:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ pCard(hand[nHand],\ deck[nCards].suit);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ nHand++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ pSum\ =\ *sum(hand,\ nHand);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYour\ total:\ "{}}\ <<\ pSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00180}00180\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00182}00182\ \textcolor{comment}{//\ Function\ prototype\ to\ play\ the\ dealer's\ turn}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00183}00183\ \textcolor{keywordtype}{void}\ plyDrTn(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\&\ nCards,\ \textcolor{keywordtype}{int}*\ dHand,\ \textcolor{keywordtype}{int}\&\ nDHand,\ \textcolor{keywordtype}{int}\&\ dSum)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00184}00184\ \ \ \ \ dSum\ =\ *sum(dHand,\ nDHand);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00185}00185\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDealer\ shows\ hidden\ card:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00186}00186\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nDHand;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ pCard(dHand[i],\ deck[nCards\ +\ i].suit);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00188}00188\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00189}00189\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Dealer\ total:\ "{}}\ <<\ dSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00190}00190\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00191}00191\ \ \ \ \ \textcolor{keywordflow}{while}\ (dSum\ <\ 17)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ dHand[nDHand]\ =\ draw(deck,\ nCards);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDealer\ drew:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ pCard(dHand[nDHand],\ deck[nCards].suit);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ nDHand++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ dSum\ =\ *sum(dHand,\ nDHand);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Dealer\ total:\ "{}}\ <<\ dSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00199}00199\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nFinal\ dealer\ total:\ "{}}\ <<\ dSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00200}00200\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00202}00202\ \textcolor{comment}{//\ Function\ prototype\ to\ handle\ the\ game\ outcome\ and\ update\ the\ player's\ stats}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00203}00203\ \textcolor{keywordtype}{void}\ hndlGOt(\mbox{\hyperlink{struct_save}{Save}}\&\ user,\ \textcolor{keywordtype}{int}\ bet,\ \textcolor{keywordtype}{int}\ pSum,\ \textcolor{keywordtype}{int}\ dSum)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00204}00204\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nFinal\ totals:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00205}00205\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Your\ total:\ "{}}\ <<\ pSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00206}00206\ \ \ \ \ \textcolor{keywordflow}{if}\ (pSum\ <=\ 21)\ cout\ <<\ \textcolor{stringliteral}{"{}Dealer\ total:\ "{}}\ <<\ dSum\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00207}00207\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00208}00208\ \ \ \ \ user.games++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00209}00209\ \ \ \ \ \textcolor{keywordflow}{if}\ (pSum\ >\ 21)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nBust!\ You\ lose\ \$"{}}\ <<\ bet\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ user.cash\ -\/=\ bet;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00212}00212\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dSum\ >\ 21)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDealer\ bust!\ You\ win\ \$"{}}\ <<\ bet\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ user.cash\ +=\ bet;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ user.wins++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00217}00217\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00218}00218\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (pSum\ >\ dSum)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ win\ \$"{}}\ <<\ bet\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ user.cash\ +=\ bet;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ user.wins++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00222}00222\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00223}00223\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (pSum\ <\ dSum)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou\ lose\ \$"{}}\ <<\ bet\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ user.cash\ -\/=\ bet;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00226}00226\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{else}\ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPush!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00228}00228\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00229}00229\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Current\ cash:\ \$"{}}\ <<\ user.cash\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00232}00232\ \textcolor{comment}{//\ Function\ prototype\ to\ check\ if\ the\ player\ can\ continue\ the\ game}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00233}00233\ \textcolor{keywordtype}{bool}\ chcGmCe(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_save}{Save}}\&\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00234}00234\ \ \ \ \ \textcolor{keywordflow}{if}\ (user.cash\ <=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nYou're\ broke!\ Game\ over!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00237}00237\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00239}00239\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00241}00241\ \textcolor{comment}{//\ Function\ prototype\ to\ prompt\ the\ player\ if\ they\ want\ to\ play\ another\ round}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00242}00242\ \textcolor{keywordtype}{bool}\ plyARnd()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00243}00243\ \ \ \ \ \textcolor{keywordtype}{char}\ cont;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00244}00244\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlay\ again?\ (y/n):\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ cin\ >>\ cont;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ cont\ =\ tolower(cont);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cont\ !=\ \textcolor{charliteral}{'y'}\ \&\&\ cont\ !=\ \textcolor{charliteral}{'n'})}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ y\ or\ n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00250}00250\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (cont\ !=\ \textcolor{charliteral}{'y'}\ \&\&\ cont\ !=\ \textcolor{charliteral}{'n'});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00251}00251\ \ \ \ \ clrBuf();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00252}00252\ \ \ \ \ \textcolor{keywordflow}{if}\ (cont\ ==\ \textcolor{charliteral}{'n'})\ \{\ cout\ <<\ \textcolor{stringliteral}{"{}Exiting\ the\ game.\ Goodbye!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ exit(0);\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}\}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00255}00255\ \textcolor{comment}{//\ Function\ prototype\ to\ clean\ up\ memory\ and\ end\ the\ game}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00256}00256\ \textcolor{keywordtype}{void}\ cNuGame(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}*\ hand,\ \textcolor{keywordtype}{int}*\ dHand)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00257}00257\ \ \ \ \ \textcolor{keyword}{delete}[]\ deck;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00258}00258\ \ \ \ \ \textcolor{keyword}{delete}[]\ hand;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00259}00259\ \ \ \ \ \textcolor{keyword}{delete}[]\ dHand;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00260}00260\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00262}00262\ \textcolor{comment}{//\ Function\ prototype\ to\ validate\ the\ player's\ username}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00263}00263\ \textcolor{keywordtype}{bool}\ vName(\textcolor{keywordtype}{string}\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00264}00264\ \ \ \ \ \textcolor{keywordflow}{if}\ (name.length()\ <\ 3\ ||\ name.length()\ >\ 30)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00265}00265\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Username\ must\ be\ 3-\/30\ characters\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00267}00267\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00268}00268\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00269}00269\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ :\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00270}00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isalnum(c)\ \&\&\ c\ !=\ \textcolor{charliteral}{'\_'})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Username\ can\ only\ contain\ letters,\ numbers,\ and\ underscore\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00273}00273\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00274}00274\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00276}00276\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00278}00278\ \textcolor{comment}{//\ Function\ prototype\ to\ clear\ the\ input\ buffer}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00279}00279\ \textcolor{keywordtype}{void}\ clrBuf()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00280}00280\ \ \ \ \ cin.clear();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00281}00281\ \ \ \ \ cin.ignore(1000,\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00282}00282\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00283}00283\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00284}00284\ \textcolor{comment}{//\ Function\ prototype\ to\ load\ a\ saved\ game}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00285}00285\ \textcolor{keywordtype}{bool}\ load(\mbox{\hyperlink{struct_save}{Save}}\&\ user,\ \textcolor{keywordtype}{string}\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00286}00286\ \ \ \ \ \textcolor{keywordtype}{string}\ fname\ =\ name\ +\ \textcolor{stringliteral}{"{}.dat"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00287}00287\ \ \ \ \ ifstream\ in(fname,\ ios::binary\ |\ ios::in);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00288}00288\ \ \ \ \ \textcolor{keywordflow}{if}\ (!in)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ in.seekg(0,\ ios::end);\textcolor{keywordtype}{long}\ fileSize\ =\ in.tellg();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00289}00289\ \ \ \ \ in.seekg(0,\ ios::beg);\ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&user),\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_save}{Save}}));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00290}00290\ \ \ \ \ in.close();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00291}00291\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00292}00292\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00294}00294\ \textcolor{comment}{//\ Function\ prototype\ to\ save\ the\ current\ game\ state}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00295}00295\ \textcolor{keywordtype}{void}\ save(\mbox{\hyperlink{struct_save}{Save}}\ user,\ \textcolor{keywordtype}{string}\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00296}00296\ \ \ \ \ \textcolor{keywordtype}{string}\ fname\ =\ name\ +\ \textcolor{stringliteral}{"{}.dat"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00297}00297\ \ \ \ \ ofstream\ out(fname,\ ios::binary\ |\ ios::out);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00298}00298\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&user),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_save}{Save}}));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00299}00299\ \ \ \ \ out.close();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00300}00300\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00302}00302\ \textcolor{comment}{//\ Function\ prototype\ to\ initialize\ the\ deck\ of\ cards}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00303}00303\ \textcolor{keywordtype}{void}\ init(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\&\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00304}00304\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00305}00305\ \ \ \ \ \ \ \ \ deck[i].val\ =\ i\ \%\ 13\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00306}00306\ \ \ \ \ \ \ \ \ deck[i].suit\ =\ \textcolor{keyword}{static\_cast<}Suit\textcolor{keyword}{>}(i\ /\ 13);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00307}00307\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00308}00308\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00309}00309\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00310}00310\ \textcolor{comment}{//\ Function\ prototype\ to\ shuffle\ the\ deck\ of\ cards}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00311}00311\ \textcolor{keywordtype}{void}\ shuf(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00312}00312\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00313}00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j\ =\ rand()\ \%\ size;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00314}00314\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_card}{Card}}\ temp\ =\ deck[i];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00315}00315\ \ \ \ \ \ \ \ \ deck[i]\ =\ deck[j];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00316}00316\ \ \ \ \ \ \ \ \ deck[j]\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00317}00317\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00318}00318\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00320}00320\ \textcolor{comment}{//\ Function\ prototype\ to\ draw\ a\ card\ from\ the\ deck}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00321}00321\ \textcolor{keywordtype}{int}\ draw(\mbox{\hyperlink{struct_card}{Card}}*\ deck,\ \textcolor{keywordtype}{int}\&\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00322}00322\ \ \ \ \ \textcolor{keywordflow}{return}\ deck[-\/-\/size].val\ >\ 10\ ?\ 10\ :\ deck[size].val;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00323}00323\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00325}00325\ \textcolor{comment}{//\ Function\ prototype\ to\ return\ the\ full\ name\ of\ a\ suit\ (e.g.,\ Hearts)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00326}00326\ \textcolor{keywordtype}{string}\ fllSuit(\textcolor{keywordtype}{int}\ s)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00327}00327\ \ \ \ \ \textcolor{keywordflow}{switch}\ (s)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00328}00328\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ HEART:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Hearts"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00329}00329\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DIAM:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Diamonds"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00330}00330\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SPADE:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Spades"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00331}00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Clubs"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00332}00332\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00333}00333\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00335}00335\ \textcolor{comment}{//\ Function\ prototype\ to\ return\ the\ full\ name\ of\ a\ card's\ value\ (e.g.,\ Ace)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00336}00336\ \textcolor{keywordtype}{string}\ cardVal(\textcolor{keywordtype}{int}\ val)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00337}00337\ \ \ \ \ \textcolor{keywordflow}{switch}\ (val)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00338}00338\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Ace"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00339}00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Two"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Three"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00341}00341\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Four"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00342}00342\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Five"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00343}00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Six"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00344}00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Seven"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00345}00345\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Eight"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00346}00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Nine"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00347}00347\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Ten"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00348}00348\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Jack"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00349}00349\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Queen"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00350}00350\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}King"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00351}00351\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00352}00352\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00354}00354\ \textcolor{comment}{//\ Function\ prototype\ to\ print\ a\ single\ card's\ value\ and\ suit}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00355}00355\ \textcolor{keywordtype}{void}\ pCard(\textcolor{keywordtype}{int}\ val,\ \textcolor{keywordtype}{char}\ suit)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00356}00356\ \ \ \ \ cout\ <<\ cardVal(val)\ <<\ \textcolor{stringliteral}{"{}\ of\ "{}}\ <<\ fllSuit(suit)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00357}00357\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00359}00359\ \textcolor{comment}{//\ Function\ prototype\ to\ calculate\ the\ sum\ of\ a\ hand}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00360}00360\ \textcolor{keywordtype}{int}*\ sum(\textcolor{keywordtype}{int}*\ hand,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00361}00361\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ total\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00362}00362\ \ \ \ \ total\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00363}00363\ \ \ \ \ \textcolor{keywordtype}{int}\ aces\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00364}00364\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00365}00365\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00366}00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hand[i]\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ aces++;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ 11;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00369}00369\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ hand[i];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00371}00371\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00372}00372\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00373}00373\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00374}00374\ \ \ \ \ \textcolor{keywordflow}{while}\ (total\ >\ 21\ \&\&\ aces\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00375}00375\ \ \ \ \ \ \ \ \ total\ -\/=\ 10;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00376}00376\ \ \ \ \ \ \ \ \ aces-\/-\/;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00377}00377\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00378}00378\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00379}00379\ \ \ \ \ \textcolor{keywordflow}{return}\ \&total;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00380}00380\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00381}00381\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00382}00382\ \textcolor{comment}{//\ Function\ prototype\ to\ prompt\ the\ player\ for\ hit\ or\ stand}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00383}00383\ \textcolor{keywordtype}{bool}\ hit()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00384}00384\ \ \ \ \ \textcolor{keywordtype}{char}\ ch;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00385}00385\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00386}00386\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nHit?\ (y/n):\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00387}00387\ \ \ \ \ \ \ \ \ cin\ >>\ ch;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00388}00388\ \ \ \ \ \ \ \ \ ch\ =\ tolower(ch);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00389}00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ch\ !=\ \textcolor{charliteral}{'y'}\ \&\&\ ch\ !=\ \textcolor{charliteral}{'n'})}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Please\ enter\ y\ or\ n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00391}00391\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (ch\ !=\ \textcolor{charliteral}{'y'}\ \&\&\ ch\ !=\ \textcolor{charliteral}{'n'});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00392}00392\ \ \ \ \ \textcolor{keywordflow}{return}\ ch\ ==\ \textcolor{charliteral}{'y'};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00393}00393\ \}}
+
+\end{DoxyCode}
