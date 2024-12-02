@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__8dep_8inc_source" xml:lang="en-US">
-<title>.dep.inc</title>
-<programlisting linenumbering="unnumbered"><anchor xml:id="__8dep_8inc_source_1l00001"/>00001 <emphasis role="preprocessor">#&#32;This&#32;code&#32;depends&#32;on&#32;make&#32;tool&#32;being&#32;used</emphasis>
-<anchor xml:id="__8dep_8inc_source_1l00002"/>00002 DEPFILES=$(wildcard&#32;$(addsuffix&#32;.d,&#32;${OBJECTFILES}&#32;${TESTOBJECTFILES}))
-<anchor xml:id="__8dep_8inc_source_1l00003"/>00003 ifneq&#32;(${DEPFILES},)
-<anchor xml:id="__8dep_8inc_source_1l00004"/>00004 include&#32;${DEPFILES}
-<anchor xml:id="__8dep_8inc_source_1l00005"/>00005 endif
-</programlisting></section>
