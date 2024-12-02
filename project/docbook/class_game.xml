@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game" xml:lang="en-US">
+<title>Game Class Reference</title>
+<indexterm><primary>Game</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_game_1a3d9b98f7c4a96ecf578f75b96c9f0e90">start</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_game_1abb28875d74d25fa9e0dcdbe37c6ad89c"/><emphasis role="strong">Game</emphasis> (const <link linkend="_class_game">Game</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_game_1aead5d069ae11b86a22857d9e7be2f184"/><link linkend="_class_game">Game</link> &amp; <emphasis role="strong">operator=</emphasis> (const <link linkend="_class_game">Game</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_game">Game</link> &amp; <link linkend="_class_game_1a9b5d5cc069f5d6f874d8be75ae319d1d">get</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__black_jack_game_8h_source_1l00017">17</link> of file <link linkend="__black_jack_game_8h_source">BlackJackGame.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_game_1a9b5d5cc069f5d6f874d8be75ae319d1d"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>Game</secondary></indexterm>
+<indexterm><primary>Game</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_class_game">Game</link> &amp; Game::get ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__black_jack_game_8cpp_source_1l00014">14</link> of file <link linkend="__black_jack_game_8cpp_source">BlackJackGame.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_game_1a3d9b98f7c4a96ecf578f75b96c9f0e90"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>Game</secondary></indexterm>
+<indexterm><primary>Game</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void Game::start ( )</computeroutput></para><para>
+Definition at line <link linkend="__black_jack_game_8cpp_source_1l00031">31</link> of file <link linkend="__black_jack_game_8cpp_source">BlackJackGame.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+BlackJackGame.hBlackJackGame.cpp</section>
+</section>

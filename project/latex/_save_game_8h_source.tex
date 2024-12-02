@@ -1,0 +1,37 @@
+\doxysection{Save\+Game.\+h}
+\hypertarget{_save_game_8h_source}{}\label{_save_game_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00001}00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00002}00002\ \textcolor{comment}{\ *\ File:\ \ \ SaveGame.h}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Author:\ Ireoluwa\ Dairo}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Created\ on\ November\ 27,\ 2024,\ 4:24\ PM}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SAVEGAME\_H}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SAVEGAME\_H}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00014}\mbox{\hyperlink{struct_save}{00014}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_save}{Save}}\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{char}\ name[30];\ \ \textcolor{comment}{//\ Name}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{int}\ funds;\ \ \ \ \ \ \textcolor{comment}{//\ Money}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{int}\ wins;\ \ \ \ \ \ \ \textcolor{comment}{//\ Wins}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{int}\ games;\ \ \ \ \ \ \textcolor{comment}{//\ Games}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{int}\ gmsAll;\ \ \ \ \ \textcolor{comment}{//\ All\ games}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ winsAll;\ \ \ \ \textcolor{comment}{//\ All\ wins}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00021}00021\ \};}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00023}\mbox{\hyperlink{class_save_game}{00023}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_save_game}{SaveGame}}\ \{\ \ \textcolor{comment}{//\ Changed\ from\ SaveGm\ back\ to\ SaveGame}}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00024}00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ load(\mbox{\hyperlink{struct_save}{Save}}\&\ data,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ save(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_save}{Save}}\&\ data,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ valid(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00028}00028\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00029}00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ fname(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00031}00031\ \};}
+\DoxyCodeLine{\Hypertarget{_save_game_8h_source_l00032}00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

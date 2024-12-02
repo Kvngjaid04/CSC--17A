@@ -1,0 +1,98 @@
+\doxysection{Card.\+cpp}
+\hypertarget{_card_8cpp_source}{}\label{_card_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ File:\ \ \ Card.cpp}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ Author:\ Ireoluwa\ Dairo}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ Created\ on\ November\ 27,\ 2024,\ 3:46\ PM}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}Card.h"{}}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00011}00011\ \textcolor{comment}{//\ Initialize\ static\ member}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00012}00012\ \textcolor{keywordtype}{int}\ Card::cardCount\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00014}00014\ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00015}00015\ Card::Card()\ :\ value(1),\ suit(Suit::HEARTS)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00016}00016\ \ \ \ \ cardCount++;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00019}00019\ \textcolor{comment}{//\ Parameterized\ Constructor}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00020}00020\ Card::Card(\textcolor{keywordtype}{int}\ value,\ Suit\ suit)\ :\ suit(suit)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00021}00021\ \ \ \ \ validateValue(value);}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00022}00022\ \ \ \ \ this-\/>value\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00023}00023\ \ \ \ \ cardCount++;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00026}00026\ \textcolor{comment}{//\ Copy\ Constructor}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00027}00027\ Card::Card(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_card}{Card}}\&\ other)\ :\ value(other.value),\ suit(other.suit)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00028}00028\ \ \ \ \ cardCount++;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00031}00031\ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00032}00032\ Card::\string~Card()\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00033}00033\ \ \ \ \ cardCount-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00036}00036\ \textcolor{comment}{//\ Validate\ card\ value}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00037}00037\ \textcolor{keywordtype}{void}\ Card::validateValue(\textcolor{keywordtype}{int}\ val)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (val\ <\ 1\ ||\ val\ >\ 13)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Card\ value\ must\ be\ between\ 1\ and\ 13"{}});}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00043}00043\ \textcolor{comment}{//\ Get\ suit\ as\ string}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00044}00044\ std::string\ Card::getSuitString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{switch}(suit)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Suit::HEARTS:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Hearts"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Suit::DIAMONDS:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Diamonds"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Suit::CLUBS:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Clubs"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Suit::SPADES:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Spades"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00054}00054\ \textcolor{comment}{//\ Get\ value\ as\ string}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00055}00055\ std::string\ Card::getValueString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{switch}(value)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Ace"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Jack"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Queen"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 13:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}King"{}};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ std::to\_string(value);}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00065}00065\ \textcolor{comment}{//\ Equality\ operator}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00066}00066\ \textcolor{keywordtype}{bool}\ Card::operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_card}{Card}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{return}\ (value\ ==\ other.value)\ \&\&\ (suit\ ==\ other.suit);}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00070}00070\ \textcolor{comment}{//\ Inequality\ operator}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00071}00071\ \textcolor{keywordtype}{bool}\ Card::operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_card}{Card}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ ==\ other);}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00075}00075\ \textcolor{comment}{//\ Assignment\ operator}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00076}00076\ \mbox{\hyperlink{class_card}{Card}}\&\ Card::operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_card}{Card}}\&\ other)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ value\ =\ other.value;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ suit\ =\ other.suit;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00084}00084\ \textcolor{comment}{//\ Static\ method\ to\ get\ total\ card\ count}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00085}00085\ \textcolor{keywordtype}{int}\ Card::getNumCardsCreated()\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{return}\ cardCount;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00089}00089\ \textcolor{comment}{//\ Friend\ output\ operator}}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00090}00090\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_card}{Card}}\&\ card)\ \{}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00091}00091\ \ \ \ \ os\ <<\ card.getValueString()\ <<\ \textcolor{stringliteral}{"{}\ of\ "{}}\ <<\ card.getSuitString();}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{\Hypertarget{_card_8cpp_source_l00093}00093\ \}}
+
+\end{DoxyCode}

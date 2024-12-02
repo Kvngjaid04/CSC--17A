@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Blackjack</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_dealer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_deck.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_res.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_human.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_save.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_save_game.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_8dep_8inc_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_black_jack_game_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_black_jack_game_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_card_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_card_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_deck_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_stats_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_stats_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_save_game_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_save_game_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

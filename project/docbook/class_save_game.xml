@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_save_game" xml:lang="en-US">
+<title>SaveGame Class Reference</title>
+<indexterm><primary>SaveGame</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_save_game_1aee1d61f41270f9256f47a858e00db05a">load</link> (<link linkend="_struct_save">Save</link> &amp;data, const string &amp;user)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_save_game_1a4657b0a4750db6c1ba1a8f4033a46372">save</link> (const <link linkend="_struct_save">Save</link> &amp;data, const string &amp;user)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_save_game_1abf8a728e1a1a764a838a1456f0c35ef5">valid</link> (const string &amp;user)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__save_game_8h_source_1l00023">23</link> of file <link linkend="__save_game_8h_source">SaveGame.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_save_game_1aee1d61f41270f9256f47a858e00db05a"/><section>
+    <title>load()</title>
+<indexterm><primary>load</primary><secondary>SaveGame</secondary></indexterm>
+<indexterm><primary>SaveGame</primary><secondary>load</secondary></indexterm>
+<para><computeroutput>bool SaveGame::load (<link linkend="_struct_save">Save</link> &amp; data, const string &amp; user)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__save_game_8cpp_source_1l00012">12</link> of file <link linkend="__save_game_8cpp_source">SaveGame.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_save_game_1a4657b0a4750db6c1ba1a8f4033a46372"/><section>
+    <title>save()</title>
+<indexterm><primary>save</primary><secondary>SaveGame</secondary></indexterm>
+<indexterm><primary>SaveGame</primary><secondary>save</secondary></indexterm>
+<para><computeroutput>bool SaveGame::save (const <link linkend="_struct_save">Save</link> &amp; data, const string &amp; user)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__save_game_8cpp_source_1l00021">21</link> of file <link linkend="__save_game_8cpp_source">SaveGame.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_save_game_1abf8a728e1a1a764a838a1456f0c35ef5"/><section>
+    <title>valid()</title>
+<indexterm><primary>valid</primary><secondary>SaveGame</secondary></indexterm>
+<indexterm><primary>SaveGame</primary><secondary>valid</secondary></indexterm>
+<para><computeroutput>bool SaveGame::valid (const string &amp; user)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__save_game_8cpp_source_1l00030">30</link> of file <link linkend="__save_game_8cpp_source">SaveGame.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+SaveGame.hSaveGame.cpp</section>
+</section>

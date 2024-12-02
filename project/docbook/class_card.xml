@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_card" xml:lang="en-US">
+<title>Card Class Reference</title>
+<indexterm><primary>Card</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum class <emphasis role="strong">Suit</emphasis> { <emphasis role="strong">HEARTS</emphasis>
+, <emphasis role="strong">DIAMONDS</emphasis>
+, <emphasis role="strong">CLUBS</emphasis>
+, <emphasis role="strong">SPADES</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_card_1a9089c1bb6ba4f759dcca716e6ff42f54">Card</link> (int value, Suit suit)</para>
+</listitem>
+            <listitem><para><link linkend="_class_card_1a38013f9863853a4de0d6e1d3be20ca03">Card</link> (const <link linkend="_class_card">Card</link> &amp;other)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_card_1acc9b1b81d72e09c5a70036d0b91b4b30">getValue</link> () const</para>
+</listitem>
+            <listitem><para>Suit <link linkend="_class_card_1acfe58701c3583e9bc86ac2fe1e323516">getSuit</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_card_1aff2004b886dc0c66925dcfcf241e9a43">getSuitString</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_card_1a80420dbb75cf842c3020951d1169143c">getValueString</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_card_1a72af3c8dc8c8d30901166e0bb36e0112">operator==</link> (const <link linkend="_class_card">Card</link> &amp;other) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_card_1aff83c9c9c5b077e7f7cc6aa738feed25">operator!=</link> (const <link linkend="_class_card">Card</link> &amp;other) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_card">Card</link> &amp; <link linkend="_class_card_1ad2ec2f42129790f79948297c128fba9f">operator=</link> (const <link linkend="_class_card">Card</link> &amp;other)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_class_card_1a3e30db73c71f875fb07ba04c59afb95e">getNumCardsCreated</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_class_card_1a3bbd82d9047456c6ecbe51a56ca7a584">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_class_card">Card</link> &amp;card)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__card_8h_source_1l00014">14</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_card_1a5725a8e05afab8cd2f555bd81b069860"/><section>
+    <title>Suit</title>
+<indexterm><primary>Suit</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Suit</secondary></indexterm>
+<para><computeroutput>enum class Card::Suit<computeroutput>[strong]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__card_8h_source_1l00017">17</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_card_1a783f5854cbe8c183ee3d4414c01472c0"/><section>
+    <title>Card()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<para><computeroutput>Card::Card ( )</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00015">15</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a9089c1bb6ba4f759dcca716e6ff42f54"/><section>
+    <title>Card()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<para><computeroutput>Card::Card (int value, Suit suit)</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00020">20</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a38013f9863853a4de0d6e1d3be20ca03"/><section>
+    <title>Card()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<para><computeroutput>Card::Card (const <link linkend="_class_card">Card</link> &amp; other)</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00027">27</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a4e05b0b68e43e5e76c6194458cee874f"/><section>
+    <title>~Card()</title>
+<indexterm><primary>~Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>~Card</secondary></indexterm>
+<para><computeroutput>Card::~Card ( )</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00032">32</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_card_1a3e30db73c71f875fb07ba04c59afb95e"/><section>
+    <title>getNumCardsCreated()</title>
+<indexterm><primary>getNumCardsCreated</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getNumCardsCreated</secondary></indexterm>
+<para><computeroutput>int Card::getNumCardsCreated ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00085">85</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1acfe58701c3583e9bc86ac2fe1e323516"/><section>
+    <title>getSuit()</title>
+<indexterm><primary>getSuit</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getSuit</secondary></indexterm>
+<para><computeroutput>Card::Suit Card::getSuit ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__card_8h_source_1l00055">55</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+<anchor xml:id="_class_card_1aff2004b886dc0c66925dcfcf241e9a43"/><section>
+    <title>getSuitString()</title>
+<indexterm><primary>getSuitString</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getSuitString</secondary></indexterm>
+<para><computeroutput>std::string Card::getSuitString ( ) const</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00044">44</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1acc9b1b81d72e09c5a70036d0b91b4b30"/><section>
+    <title>getValue()</title>
+<indexterm><primary>getValue</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getValue</secondary></indexterm>
+<para><computeroutput>int Card::getValue ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__card_8h_source_1l00054">54</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a80420dbb75cf842c3020951d1169143c"/><section>
+    <title>getValueString()</title>
+<indexterm><primary>getValueString</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getValueString</secondary></indexterm>
+<para><computeroutput>std::string Card::getValueString ( ) const</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00055">55</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1aff83c9c9c5b077e7f7cc6aa738feed25"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool Card::operator!= (const <link linkend="_class_card">Card</link> &amp; other) const</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00071">71</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1ad2ec2f42129790f79948297c128fba9f"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_card">Card</link> &amp; Card::operator= (const <link linkend="_class_card">Card</link> &amp; other)</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00076">76</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a72af3c8dc8c8d30901166e0bb36e0112"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool Card::operator== (const <link linkend="_class_card">Card</link> &amp; other) const</computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00066">66</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_class_card_1a3bbd82d9047456c6ecbe51a56ca7a584"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_class_card">Card</link> &amp; card)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__card_8cpp_source_1l00090">90</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Card.hCard.cpp</section>
+</section>

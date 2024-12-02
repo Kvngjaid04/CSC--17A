@@ -1,0 +1,459 @@
+.TH "Player" 3 "Blackjack_1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Player \- Abstract base class for blackjack players Defines common functionality for managing hands, bets, funds and statistics\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Player\&.h>\fP
+.PP
+Inherited by \fBDealer\fP, and \fBHuman\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBPlayer\fP (const string &\fBname\fP, int \fBfunds\fP=1000)"
+.br
+.RI "Constructor with name and initial funds\&. "
+.ti -1c
+.RI "virtual \fB~Player\fP ()"
+.br
+.RI "Virtual destructor\&. "
+.ti -1c
+.RI "virtual bool \fBwantHit\fP ()=0"
+.br
+.RI "Pure virtual method for hit/stand decision\&. "
+.ti -1c
+.RI "virtual void \fBdispHand\fP () const =0"
+.br
+.RI "Pure virtual method to display player's hand\&. "
+.ti -1c
+.RI "virtual void \fBaddCard\fP (const \fBCard\fP &card)"
+.br
+.RI "Add card to player's hand\&. "
+.ti -1c
+.RI "virtual int \fBgetVal\fP () const"
+.br
+.RI "Calculate hand value\&. "
+.ti -1c
+.RI "virtual bool \fBisBust\fP () const"
+.br
+.RI "Check if hand value exceeds 21\&. "
+.ti -1c
+.RI "virtual void \fBclear\fP ()"
+.br
+.RI "Clear player's hand\&. "
+.ti -1c
+.RI "bool \fBsetBet\fP (int amt)"
+.br
+.RI "Set bet amount\&. "
+.ti -1c
+.RI "void \fBaddWin\fP (int amt)"
+.br
+.RI "Add winnings to funds\&. "
+.ti -1c
+.RI "void \fBloseBet\fP (int amt)"
+.br
+.RI "Deduct lost bet from funds\&. "
+.ti -1c
+.RI "void \fBsetFund\fP (int amt)"
+.br
+.RI "Set player's funds\&. "
+.ti -1c
+.RI "void \fBaddGame\fP (bool won, int amt)"
+.br
+.RI "Record game result in stats\&. "
+.ti -1c
+.RI "int \fBgetRate\fP () const"
+.br
+.RI "Get win rate from stats\&. "
+.ti -1c
+.RI "\fBPStats\fP & \fBgetStat\fP ()"
+.br
+.RI "Get player statistics\&. "
+.ti -1c
+.RI "string \fBgetName\fP () const"
+.br
+.RI "Get player's name\&. "
+.ti -1c
+.RI "int \fBgetFund\fP () const"
+.br
+.RI "Get current funds\&. "
+.ti -1c
+.RI "int \fBgetBet\fP () const"
+.br
+.RI "Get current bet\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBPlayer\fP &other) const"
+.br
+.RI "Equality comparison\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBPlayer\fP &other) const"
+.br
+.RI "Inequality comparison\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "vector< \fBCard\fP > \fBhand\fP"
+.br
+.ti -1c
+.RI "int \fBfunds\fP"
+.br
+.ti -1c
+.RI "int \fBbet\fP"
+.br
+.ti -1c
+.RI "\fBPStats\fP \fBstats\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Abstract base class for blackjack players Defines common functionality for managing hands, bets, funds and statistics\&. 
+.PP
+Definition at line \fB23\fP of file \fBPlayer\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Player::Player ()"
+
+.PP
+Default constructor\&. Default constructor Initializes anonymous player with default values\&.
+
+.PP
+Base \fBPlayer\fP Class Implementation 
+.PP
+Definition at line \fB18\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "Player::Player (const string & n, int f = \fR1000\fP)"
+
+.PP
+Constructor with name and initial funds\&. Parameterized constructor\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBPlayer\fP's name 
+.br
+\fIfunds\fP Initial funds (defaults to 1000)
+.br
+\fIn\fP \fBPlayer\fP name 
+.br
+\fIf\fP Initial funds 
+.RE
+.PP
+
+.PP
+Definition at line \fB30\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "Player::~Player ()\fR [virtual]\fP"
+
+.PP
+Virtual destructor\&. Destructor\&. 
+.PP
+Definition at line \fB40\fP of file \fBPlayer\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Player::addCard (const \fBCard\fP & card)\fR [virtual]\fP"
+
+.PP
+Add card to player's hand\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard\fP \fBCard\fP to add 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "void Player::addGame (bool won, int amt)"
+
+.PP
+Record game result in stats\&. Record game result\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwon\fP Whether game was won 
+.br
+\fIamt\fP Amount won/lost 
+.RE
+.PP
+
+.PP
+Definition at line \fB142\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "void Player::addWin (int amt)"
+
+.PP
+Add winnings to funds\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamt\fP Amount won 
+.RE
+.PP
+
+.PP
+Definition at line \fB117\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "void Player::clear ()\fR [virtual]\fP"
+
+.PP
+Clear player's hand\&. Clear hand and bet\&. 
+.PP
+Definition at line \fB94\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "virtual void Player::dispHand () const\fR [pure virtual]\fP"
+
+.PP
+Pure virtual method to display player's hand\&. 
+.PP
+Implemented in \fBDealer\fP, and \fBHuman\fP\&.
+.SS "int Player::getBet () const"
+
+.PP
+Get current bet\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Current bet amount 
+.RE
+.PP
+
+.PP
+Definition at line \fB155\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "int Player::getFund () const"
+
+.PP
+Get current funds\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Available funds 
+.RE
+.PP
+
+.PP
+Definition at line \fB154\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "string Player::getName () const"
+
+.PP
+Get player's name\&. 
+.PP
+\fBReturns\fP
+.RS 4
+string \fBPlayer\fP name 
+.RE
+.PP
+
+.PP
+Definition at line \fB153\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "int Player::getRate () const"
+
+.PP
+Get win rate from stats\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Win percentage
+.RE
+.PP
+Getter Methods 
+.PP
+Definition at line \fB152\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "\fBPStats\fP & Player::getStat ()"
+
+.PP
+Get player statistics\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBPStats\fP& Reference to player stats 
+.RE
+.PP
+
+.PP
+Definition at line \fB156\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "int Player::getVal () const\fR [virtual]\fP"
+
+.PP
+Calculate hand value\&. Calculate hand value considering aces\&.
+
+.PP
+\fBReturns\fP
+.RS 4
+int Total value of cards in hand
+
+.PP
+int Total hand value 
+.RE
+.PP
+
+.PP
+Definition at line \fB56\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "bool Player::isBust () const\fR [virtual]\fP"
+
+.PP
+Check if hand value exceeds 21\&. Check if player has bust\&.
+
+.PP
+\fBReturns\fP
+.RS 4
+bool True if player has bust
+
+.PP
+bool True if hand value exceeds 21 
+.RE
+.PP
+
+.PP
+Definition at line \fB87\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "void Player::loseBet (int amt)"
+
+.PP
+Deduct lost bet from funds\&. Handle lost bet\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIamt\fP Amount lost 
+.RE
+.PP
+
+.PP
+Definition at line \fB125\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "bool Player::operator!= (const \fBPlayer\fP & other) const"
+
+.PP
+Inequality comparison\&. Inequality comparison operator\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP \fBPlayer\fP to compare with 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool True if players are not equal
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP \fBPlayer\fP to compare with 
+.RE
+.PP
+
+.PP
+Definition at line \fB170\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "bool Player::operator== (const \fBPlayer\fP & other) const"
+
+.PP
+Equality comparison\&. Equality comparison operator\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP \fBPlayer\fP to compare with 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool True if players are equal
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP \fBPlayer\fP to compare with 
+.RE
+.PP
+
+.PP
+Definition at line \fB162\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "bool Player::setBet (int amt)"
+
+.PP
+Set bet amount\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamt\fP Bet amount 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool True if bet is valid and set
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIamt\fP Amount to bet 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool True if bet is valid and set 
+.RE
+.PP
+
+.PP
+Definition at line \fB104\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "void Player::setFund (int amt)"
+
+.PP
+Set player's funds\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamt\fP New fund amount 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "virtual bool Player::wantHit ()\fR [pure virtual]\fP"
+
+.PP
+Pure virtual method for hit/stand decision\&. 
+.PP
+\fBReturns\fP
+.RS 4
+bool True if player wants another card 
+.RE
+.PP
+
+.PP
+Implemented in \fBDealer\fP, and \fBHuman\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Player::bet\fR [protected]\fP"
+Current bet amount 
+.PP
+Definition at line \fB144\fP of file \fBPlayer\&.h\fP\&.
+.SS "int Player::funds\fR [protected]\fP"
+Available funds 
+.PP
+Definition at line \fB143\fP of file \fBPlayer\&.h\fP\&.
+.SS "vector<\fBCard\fP> Player::hand\fR [protected]\fP"
+Current hand of cards 
+.PP
+Definition at line \fB142\fP of file \fBPlayer\&.h\fP\&.
+.SS "string Player::name\fR [protected]\fP"
+\fBPlayer\fP's name 
+.PP
+Definition at line \fB141\fP of file \fBPlayer\&.h\fP\&.
+.SS "\fBPStats\fP Player::stats\fR [protected]\fP"
+\fBPlayer\fP statistics 
+.PP
+Definition at line \fB145\fP of file \fBPlayer\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Blackjack_1 from the source code\&.

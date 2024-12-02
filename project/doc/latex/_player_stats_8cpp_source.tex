@@ -1,0 +1,121 @@
+\doxysection{Player\+Stats.\+cpp}
+\hypertarget{_player_stats_8cpp_source}{}\label{_player_stats_8cpp_source}\mbox{\hyperlink{_player_stats_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_stats_8h}{PlayerStats.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00012}00012\ \textcolor{keywordtype}{int}\ PStats::num\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00019}\mbox{\hyperlink{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}{00019}}\ \mbox{\hyperlink{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}{PStats::PStats}}(\textcolor{keywordtype}{int}\ maxSz)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00020}00020\ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ res\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_res}{GameRes}}[maxSz];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ max\ =\ maxSz;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ rate\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ games\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ wins\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ num++;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00028}00028\ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (bad\_alloc\&\ ba)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ runtime\_error(\textcolor{stringliteral}{"{}Memory\ fail"{}});}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00030}00030\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00038}\mbox{\hyperlink{class_p_stats_ac2ee6a18282878cd56ca25af109b97d2}{00038}}\ \mbox{\hyperlink{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}{PStats::PStats}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ old)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00039}00039\ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ res\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_res}{GameRes}}[old.max];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ max\ =\ old.max;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ size\ =\ old.size;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ rate\ =\ old.rate;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ games\ =\ old.games;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ wins\ =\ old.wins;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ res[i]\ =\ old.res[i];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ num++;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00051}00051\ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (bad\_alloc\&\ ba)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ runtime\_error(\textcolor{stringliteral}{"{}Copy\ fail"{}});}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00053}00053\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00060}\mbox{\hyperlink{class_p_stats_a72f828eccdf8b9515b8d60cd08a424ce}{00060}}\ \mbox{\hyperlink{class_p_stats_a72f828eccdf8b9515b8d60cd08a424ce}{PStats::\string~PStats}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00061}00061\ \ \ \ \textcolor{keyword}{delete}[]\ res;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00062}00062\ \ \ \ num-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00071}\mbox{\hyperlink{class_p_stats_a8f7ad3aadacb64cbe4909d3c83fc81f2}{00071}}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ \mbox{\hyperlink{class_p_stats_a8f7ad3aadacb64cbe4909d3c83fc81f2}{PStats::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ rhs)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00072}00072\ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{this}\ !=\ \&rhs)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ res;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ res\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_res}{GameRes}}[rhs.max];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ max\ =\ rhs.max;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ size\ =\ rhs.size;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ rate\ =\ rhs.rate;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ games\ =\ rhs.games;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ wins\ =\ rhs.wins;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res[i]\ =\ rhs.res[i];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (bad\_alloc\&\ ba)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ runtime\_error(\textcolor{stringliteral}{"{}Set\ fail"{}});}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00088}00088\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00089}00089\ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00097}\mbox{\hyperlink{class_p_stats_abc6c2b71cdf9ad50349c48aa3254b73c}{00097}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_stats_abc6c2b71cdf9ad50349c48aa3254b73c}{PStats::setAll}}(\textcolor{keywordtype}{int}\ gms,\ \textcolor{keywordtype}{int}\ wns)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00098}00098\ \ \ \ games\ =\ gms;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00099}00099\ \ \ \ wins\ =\ wns;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00100}00100\ \ \ \ \textcolor{keywordflow}{if}(games\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ rate\ =\ (wins\ *\ 100)\ /\ games;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00102}00102\ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ rate\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00104}00104\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00111}\mbox{\hyperlink{class_p_stats_a00b301240ffc5f899e123f81b7adb30f}{00111}}\ \mbox{\hyperlink{struct_stats}{Stats}}\ \mbox{\hyperlink{class_p_stats_a00b301240ffc5f899e123f81b7adb30f}{PStats::getAll}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00112}00112\ \ \ \ \textcolor{keywordflow}{return}\ \{games,\ wins\};}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00120}\mbox{\hyperlink{class_p_stats_a497ca6c7be75c1cffb6c9887e6182732}{00120}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_stats_a497ca6c7be75c1cffb6c9887e6182732}{PStats::add}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_res}{GameRes}}\&\ newRes)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00121}00121\ \ \ \ \textcolor{keywordflow}{if}(size\ >=\ max)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ runtime\_error(\textcolor{stringliteral}{"{}Stats\ full"{}});}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00123}00123\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00124}00124\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00125}00125\ \ \ \ res[size++]\ =\ newRes;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00126}00126\ \ \ \ games++;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00127}00127\ \ \ \ \textcolor{keywordflow}{if}(newRes.\mbox{\hyperlink{class_game_res_adad8fbe33cfe6f4f8279dee29bd0a3b7}{isWin}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ wins++;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00129}00129\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00130}00130\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00131}00131\ \ \ \ \textcolor{keywordflow}{if}(games\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ rate\ =\ (wins\ *\ 100)\ /\ games;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00133}00133\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00134}00134\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00140}\mbox{\hyperlink{class_p_stats_a7056bb19a53168832c92902017bc842a}{00140}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_stats_a7056bb19a53168832c92902017bc842a}{PStats::getRate}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00141}00141\ \ \ \ \textcolor{keywordflow}{return}\ rate;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00142}00142\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00149}\mbox{\hyperlink{class_p_stats_a2804566a8a597631bc32976a29b9df15}{00149}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_p_stats_a2804566a8a597631bc32976a29b9df15}{PStats::operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00150}00150\ \ \ \ \textcolor{keywordflow}{return}\ rate\ <\ rhs.rate;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00151}00151\ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00158}\mbox{\hyperlink{class_p_stats_aa15d30a9ebfadb328ea52051644aefdc}{00158}}\ \mbox{\hyperlink{class_p_stats}{PStats}}\ \mbox{\hyperlink{class_p_stats_aa15d30a9ebfadb328ea52051644aefdc}{PStats::operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00159}00159\ \ \ \ \mbox{\hyperlink{class_p_stats}{PStats}}\ tmp(max\ +\ rhs.max);}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00160}00160\ \ \ \ tmp.size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00161}00161\ \ \ \ tmp.rate\ =\ (rate\ +\ rhs.rate)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00162}00162\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00163}00163\ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ tmp.res[tmp.size++]\ =\ res[i];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00165}00165\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00166}00166\ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rhs.size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ tmp.res[tmp.size++]\ =\ rhs.res[i];}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00168}00168\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00169}00169\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00170}00170\ \ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{\Hypertarget{_player_stats_8cpp_source_l00171}00171\ \}}
+
+\end{DoxyCode}

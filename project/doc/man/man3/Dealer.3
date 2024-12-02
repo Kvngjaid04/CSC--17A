@@ -1,0 +1,185 @@
+.TH "Dealer" 3 "Blackjack_1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Dealer \- \fBDealer\fP class Implements dealer-specific logic and display\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Player\&.h>\fP
+.PP
+Inherits \fBPlayer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDealer\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "bool \fBwantHit\fP () override"
+.br
+.RI "Get dealer's hit decision based on rules\&. "
+.ti -1c
+.RI "void \fBdispHand\fP () const override"
+.br
+.RI "Display dealer's initial hand (one card hidden) "
+.ti -1c
+.RI "void \fBshowAll\fP () const"
+.br
+.RI "Display all cards in dealer's hand\&. "
+.in -1c
+
+Public Member Functions inherited from \fBPlayer\fP
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBPlayer\fP (const string &\fBname\fP, int \fBfunds\fP=1000)"
+.br
+.RI "Constructor with name and initial funds\&. "
+.ti -1c
+.RI "virtual \fB~Player\fP ()"
+.br
+.RI "Virtual destructor\&. "
+.ti -1c
+.RI "virtual void \fBaddCard\fP (const \fBCard\fP &card)"
+.br
+.RI "Add card to player's hand\&. "
+.ti -1c
+.RI "virtual int \fBgetVal\fP () const"
+.br
+.RI "Calculate hand value\&. "
+.ti -1c
+.RI "virtual bool \fBisBust\fP () const"
+.br
+.RI "Check if hand value exceeds 21\&. "
+.ti -1c
+.RI "virtual void \fBclear\fP ()"
+.br
+.RI "Clear player's hand\&. "
+.ti -1c
+.RI "bool \fBsetBet\fP (int amt)"
+.br
+.RI "Set bet amount\&. "
+.ti -1c
+.RI "void \fBaddWin\fP (int amt)"
+.br
+.RI "Add winnings to funds\&. "
+.ti -1c
+.RI "void \fBloseBet\fP (int amt)"
+.br
+.RI "Deduct lost bet from funds\&. "
+.ti -1c
+.RI "void \fBsetFund\fP (int amt)"
+.br
+.RI "Set player's funds\&. "
+.ti -1c
+.RI "void \fBaddGame\fP (bool won, int amt)"
+.br
+.RI "Record game result in stats\&. "
+.ti -1c
+.RI "int \fBgetRate\fP () const"
+.br
+.RI "Get win rate from stats\&. "
+.ti -1c
+.RI "\fBPStats\fP & \fBgetStat\fP ()"
+.br
+.RI "Get player statistics\&. "
+.ti -1c
+.RI "string \fBgetName\fP () const"
+.br
+.RI "Get player's name\&. "
+.ti -1c
+.RI "int \fBgetFund\fP () const"
+.br
+.RI "Get current funds\&. "
+.ti -1c
+.RI "int \fBgetBet\fP () const"
+.br
+.RI "Get current bet\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBPlayer\fP &other) const"
+.br
+.RI "Equality comparison\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBPlayer\fP &other) const"
+.br
+.RI "Inequality comparison\&. "
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Attributes inherited from \fBPlayer\fP
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "vector< \fBCard\fP > \fBhand\fP"
+.br
+.ti -1c
+.RI "int \fBfunds\fP"
+.br
+.ti -1c
+.RI "int \fBbet\fP"
+.br
+.ti -1c
+.RI "\fBPStats\fP \fBstats\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBDealer\fP class Implements dealer-specific logic and display\&. 
+.PP
+Definition at line \fB170\fP of file \fBPlayer\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Dealer::Dealer ()"
+
+.PP
+Constructor\&. \fBDealer\fP constructor Initializes dealer with default values\&.
+
+.PP
+\fBDealer\fP Class Implementation 
+.PP
+Definition at line \fB223\fP of file \fBPlayer\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Dealer::dispHand () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Display dealer's initial hand (one card hidden) 
+.PP
+Implements \fBPlayer\fP\&.
+.PP
+Definition at line \fB241\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "void Dealer::showAll () const"
+
+.PP
+Display all cards in dealer's hand\&. Display dealer's complete hand Shows all cards and total value\&. 
+.PP
+Definition at line \fB256\fP of file \fBPlayer\&.cpp\fP\&.
+.SS "bool Dealer::wantHit ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Get dealer's hit decision based on rules\&. 
+.PP
+\fBReturns\fP
+.RS 4
+bool True if dealer must hit (< 17) 
+.RE
+.PP
+
+.PP
+Implements \fBPlayer\fP\&.
+.PP
+Definition at line \fB234\fP of file \fBPlayer\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Blackjack_1 from the source code\&.

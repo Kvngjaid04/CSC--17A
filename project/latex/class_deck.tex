@@ -1,0 +1,187 @@
+\doxysection{Deck\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_deck}{}\label{class_deck}\index{Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_deck_a5684451039c5e904d78b6d4b41d55f5d}{Deck}} (int num\+Decks)
+\item 
+\mbox{\hyperlink{class_deck_abb77cc39bbcab549f48a922e77019725}{Deck}} (const \mbox{\hyperlink{class_deck}{Deck}} \&other)
+\item 
+\mbox{\hyperlink{class_deck}{Deck}} \& \mbox{\hyperlink{class_deck_a94f54672e990b364ccb0f7024d960234}{operator=}} (const \mbox{\hyperlink{class_deck}{Deck}} \&other)
+\item 
+void \mbox{\hyperlink{class_deck_a64897016baf6e1c48f632dcc807096e7}{shuffle}} ()
+\item 
+T \mbox{\hyperlink{class_deck_a08384299dc4e9ebdf3d10db7ef118753}{draw\+Card}} ()
+\item 
+bool \mbox{\hyperlink{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc}{is\+Empty}} () const
+\item 
+int \mbox{\hyperlink{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4}{remaining\+Cards}} () const
+\item 
+T \mbox{\hyperlink{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_deck_a7cfbcff938d01fc5580a613003767981}{initialize\+Deck}} (int num\+Decks)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\class \mbox{\hyperlink{class_deck_ab94da4fd43709744115e172ef2ee4223}{Deck\+Logger}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = Card$>$\newline
+class Deck$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00021}{21}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\mbox{\hyperlink{class_deck}{\+::\+Deck}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00057}{57}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_a5684451039c5e904d78b6d4b41d55f5d}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_deck_a5684451039c5e904d78b6d4b41d55f5d} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\mbox{\hyperlink{class_deck}{\+::\+Deck}} (\begin{DoxyParamCaption}\item[{int}]{num\+Decks}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00062}{62}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_abb77cc39bbcab549f48a922e77019725}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_deck_abb77cc39bbcab549f48a922e77019725} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\mbox{\hyperlink{class_deck}{\+::\+Deck}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00120}{120}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_ab3294d971f9ecf25fd92d982aa2efad9}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!````~Deck@{\texorpdfstring{$\sim$}{\string~}Deck}}
+\index{````~Deck@{\texorpdfstring{$\sim$}{\string~}Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Deck()}{\string~Deck()}}
+{\footnotesize\ttfamily \label{class_deck_ab3294d971f9ecf25fd92d982aa2efad9} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_deck}{Deck}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00137}{137}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_deck_a08384299dc4e9ebdf3d10db7ef118753}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!drawCard@{drawCard}}
+\index{drawCard@{drawCard}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{drawCard()}{drawCard()}}
+{\footnotesize\ttfamily \label{class_deck_a08384299dc4e9ebdf3d10db7ef118753} 
+template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::draw\+Card (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00086}{86}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_a7cfbcff938d01fc5580a613003767981}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!initializeDeck@{initializeDeck}}
+\index{initializeDeck@{initializeDeck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{initializeDeck()}{initializeDeck()}}
+{\footnotesize\ttfamily \label{class_deck_a7cfbcff938d01fc5580a613003767981} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::initialize\+Deck (\begin{DoxyParamCaption}\item[{int}]{num\+Decks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00067}{67}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00109}{109}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_a94f54672e990b364ccb0f7024d960234}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_deck_a94f54672e990b364ccb0f7024d960234} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$ \& \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00127}{127}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe} 
+template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00144}{144}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!remainingCards@{remainingCards}}
+\index{remainingCards@{remainingCards}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remainingCards()}{remainingCards()}}
+{\footnotesize\ttfamily \label{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4} 
+template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::remaining\+Cards (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00114}{114}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+\Hypertarget{class_deck_a64897016baf6e1c48f632dcc807096e7}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily \label{class_deck_a64897016baf6e1c48f632dcc807096e7} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::shuffle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00080}{80}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_deck_ab94da4fd43709744115e172ef2ee4223}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!DeckLogger@{DeckLogger}}
+\index{DeckLogger@{DeckLogger}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeckLogger}{DeckLogger}}
+{\footnotesize\ttfamily \label{class_deck_ab94da4fd43709744115e172ef2ee4223} 
+template$<$typename T  = Card$>$ \\
+template$<$typename U $>$ \\
+friend class Deck\+Logger\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{_deck_8h_source_l00043}{43}} of file \mbox{\hyperlink{_deck_8h_source}{Deck.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Deck.\+h\end{DoxyCompactItemize}

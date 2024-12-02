@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game_res" xml:lang="en-US">
+<title>GameRes Class Reference</title>
+<indexterm><primary>GameRes</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_game_res_1a8e24d2e6c2a3455d6c13c081ad832269">getAmt</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_game_res_1adad8fbe33cfe6f4f8279dee29bd0a3b7">isWin</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_game_res_1a52e74b78aaef74ae2aa3968ebdbb2314">GameRes</link> (bool win=false, int amt=0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__player_stats_8h_source_1l00013">13</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_game_res_1a52e74b78aaef74ae2aa3968ebdbb2314"/><section>
+    <title>GameRes()</title>
+<indexterm><primary>GameRes</primary><secondary>GameRes</secondary></indexterm>
+<indexterm><primary>GameRes</primary><secondary>GameRes</secondary></indexterm>
+<para><computeroutput>GameRes::GameRes (bool win = <computeroutput>false</computeroutput>
+, int amt = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__player_stats_8h_source_1l00018">18</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_game_res_1a8e24d2e6c2a3455d6c13c081ad832269"/><section>
+    <title>getAmt()</title>
+<indexterm><primary>getAmt</primary><secondary>GameRes</secondary></indexterm>
+<indexterm><primary>GameRes</primary><secondary>getAmt</secondary></indexterm>
+<para><computeroutput>int GameRes::getAmt ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__player_stats_8h_source_1l00015">15</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<anchor xml:id="_class_game_res_1adad8fbe33cfe6f4f8279dee29bd0a3b7"/><section>
+    <title>isWin()</title>
+<indexterm><primary>isWin</primary><secondary>GameRes</secondary></indexterm>
+<indexterm><primary>GameRes</primary><secondary>isWin</secondary></indexterm>
+<para><computeroutput>bool GameRes::isWin ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__player_stats_8h_source_1l00016">16</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+PlayerStats.h</section>
+</section>

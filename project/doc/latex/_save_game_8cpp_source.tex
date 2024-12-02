@@ -1,0 +1,44 @@
+\doxysection{Save\+Game.\+cpp}
+\hypertarget{_save_game_8cpp_source}{}\label{_save_game_8cpp_source}\mbox{\hyperlink{_save_game_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_save_game_8h}{SaveGame.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00010}00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00018}\mbox{\hyperlink{class_save_game_aee1d61f41270f9256f47a858e00db05a}{00018}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_game_aee1d61f41270f9256f47a858e00db05a}{SaveGame::load}}(\mbox{\hyperlink{struct_save}{Save}}\&\ data,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00019}00019\ \ \ \ ifstream\ file(fname(user),\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00020}00020\ \ \ \ \textcolor{keywordflow}{if}\ (!file)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00021}00021\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00022}00022\ \ \ \ file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&data),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_save}{Save}}));}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00023}00023\ \ \ \ file.close();}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00024}00024\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00033}\mbox{\hyperlink{class_save_game_a4657b0a4750db6c1ba1a8f4033a46372}{00033}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_game_a4657b0a4750db6c1ba1a8f4033a46372}{SaveGame::save}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_save}{Save}}\&\ data,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00034}00034\ \ \ \ ofstream\ file(fname(user),\ ios::binary);}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00035}00035\ \ \ \ \textcolor{keywordflow}{if}\ (!file)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00036}00036\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00037}00037\ \ \ \ file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&data),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_save}{Save}}));}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00038}00038\ \ \ \ file.close();}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00039}00039\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00048}\mbox{\hyperlink{class_save_game_abf8a728e1a1a764a838a1456f0c35ef5}{00048}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_game_abf8a728e1a1a764a838a1456f0c35ef5}{SaveGame::valid}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00049}00049\ \ \ \ \textcolor{keywordflow}{if}\ (user.length()\ <\ 3\ ||\ user.length()\ >\ 30)\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00051}00051\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00052}00052\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00053}00053\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ :\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isalnum(c)\ \&\&\ c\ !=\ \textcolor{charliteral}{'\_'})\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00057}00057\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00058}00058\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00066}00066\ \textcolor{keywordtype}{string}\ SaveGame::fname(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user)\ \{}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00067}00067\ \ \ \ \textcolor{keywordflow}{return}\ user\ +\ \textcolor{stringliteral}{"{}.dat"{}};}
+\DoxyCodeLine{\Hypertarget{_save_game_8cpp_source_l00068}00068\ \}}
+
+\end{DoxyCode}

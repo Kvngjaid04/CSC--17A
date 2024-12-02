@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__save_game_8h" xml:lang="en-US">
+<title>SaveGame.h File Reference</title>
+<indexterm><primary>SaveGame.h</primary></indexterm>
+<para>
+
+<para><link linkend="_class_game">Game</link> state implementation. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?></programlisting>Include dependency graph for SaveGame.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_save_game_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_save_game_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_save">Save</link></para>
+
+<para>Structure containing saveable game state data. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_save_game">SaveGame</link></para>
+
+<para>Static class for managing game state persistence. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_game">Game</link> state implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ireoluwa Dairo </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2024-11-27 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="__save_game_8h_source">SaveGame.h</link>.</para>
+</section>
+</section>

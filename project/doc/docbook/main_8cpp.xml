@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp" xml:lang="en-US">
+<title>main.cpp File Reference</title>
+<indexterm><primary>main.cpp</primary></indexterm>
+<para>
+
+<para>Main entry point for Blackjack game. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;cstdlib&gt;<?linebreak?>#include &quot;BlackjackGame.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting>Include dependency graph for main.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_main_8cpp_1acb59d740447090dfc6783163b4a1e60b">runBlackjackTest</link> ()</para>
+
+<para>Test function demonstrating friend functionality and exception handling. </para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+
+<para>Main program entry point. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Main entry point for Blackjack game. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ireoluwa Dairo </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2024-11-27 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+
+<para>Main program entry point. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int Exit status (0 for success, 1 for error) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_main_8cpp_source_1l00031">31</link> of file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8cpp_1acb59d740447090dfc6783163b4a1e60b"/><section>
+    <title>runBlackjackTest()</title>
+<indexterm><primary>runBlackjackTest</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>runBlackjackTest</secondary></indexterm>
+<para><computeroutput>void runBlackjackTest ( )</computeroutput></para><para>
+
+<para>Test function demonstrating friend functionality and exception handling. </para>
+</para>
+
+<para>Creates a game instance and runs a test session </para>
+<para>
+Definition at line <link linkend="_main_8cpp_source_1l00017">17</link> of file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8cpp_acb59d740447090dfc6783163b4a1e60b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

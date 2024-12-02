@@ -269,6 +269,4 @@ void Game::mainLoop() {
         
         if (deck.remainingCards() < 15) {
             deck = Deck<Card>(6);
-        }
-    }
-}
+    

@@ -1,0 +1,148 @@
+\doxysection{PStats Class Reference}
+\hypertarget{class_p_stats}{}\label{class_p_stats}\index{PStats@{PStats}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}{PStats}} (int max=100)
+\item 
+\mbox{\hyperlink{class_p_stats_ac2ee6a18282878cd56ca25af109b97d2}{PStats}} (const \mbox{\hyperlink{class_p_stats}{PStats}} \&other)
+\item 
+\mbox{\hyperlink{class_p_stats}{PStats}} \& \mbox{\hyperlink{class_p_stats_a8f7ad3aadacb64cbe4909d3c83fc81f2}{operator=}} (const \mbox{\hyperlink{class_p_stats}{PStats}} \&rhs)
+\item 
+\mbox{\hyperlink{class_p_stats}{PStats}} \mbox{\hyperlink{class_p_stats_aa15d30a9ebfadb328ea52051644aefdc}{operator+}} (const \mbox{\hyperlink{class_p_stats}{PStats}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{class_p_stats_a2804566a8a597631bc32976a29b9df15}{operator$<$}} (const \mbox{\hyperlink{class_p_stats}{PStats}} \&rhs) const
+\item 
+void \mbox{\hyperlink{class_p_stats_a497ca6c7be75c1cffb6c9887e6182732}{add}} (const \mbox{\hyperlink{class_game_res}{Game\+Res}} \&res)
+\item 
+int \mbox{\hyperlink{class_p_stats_a7056bb19a53168832c92902017bc842a}{get\+Rate}} () const
+\item 
+void \mbox{\hyperlink{class_p_stats_abc6c2b71cdf9ad50349c48aa3254b73c}{set\+All}} (int games, int wins)
+\item 
+\mbox{\hyperlink{struct_stats}{Stats}} \mbox{\hyperlink{class_p_stats_a00b301240ffc5f899e123f81b7adb30f}{get\+All}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_stats_a31ced6147321a6476baab209e9dd147c}\label{class_p_stats_a31ced6147321a6476baab209e9dd147c} 
+void {\bfseries show\+All} (const \mbox{\hyperlink{class_p_stats}{PStats}} \&st)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8h_source_l00030}{30}} of file \mbox{\hyperlink{_player_stats_8h_source}{Player\+Stats.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}\index{PStats@{PStats}!PStats@{PStats}}
+\index{PStats@{PStats}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{PStats()}{PStats()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3} 
+PStats\+::\+PStats (\begin{DoxyParamCaption}\item[{int}]{max}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_ac2ee6a18282878cd56ca25af109b97d2}\index{PStats@{PStats}!PStats@{PStats}}
+\index{PStats@{PStats}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{PStats()}{PStats()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_p_stats_ac2ee6a18282878cd56ca25af109b97d2} 
+PStats\+::\+PStats (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_stats}{PStats}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_a72f828eccdf8b9515b8d60cd08a424ce}\index{PStats@{PStats}!````~PStats@{\texorpdfstring{$\sim$}{\string~}PStats}}
+\index{````~PStats@{\texorpdfstring{$\sim$}{\string~}PStats}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PStats()}{\string~PStats()}}
+{\footnotesize\ttfamily \label{class_p_stats_a72f828eccdf8b9515b8d60cd08a424ce} 
+PStats\+::\texorpdfstring{$\sim$}{\string~}\+PStats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_stats_a497ca6c7be75c1cffb6c9887e6182732}\index{PStats@{PStats}!add@{add}}
+\index{add@{add}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_p_stats_a497ca6c7be75c1cffb6c9887e6182732} 
+void PStats\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_res}{Game\+Res}} \&}]{res}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_a00b301240ffc5f899e123f81b7adb30f}\index{PStats@{PStats}!getAll@{getAll}}
+\index{getAll@{getAll}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily \label{class_p_stats_a00b301240ffc5f899e123f81b7adb30f} 
+\mbox{\hyperlink{struct_stats}{Stats}} PStats\+::get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_a7056bb19a53168832c92902017bc842a}\index{PStats@{PStats}!getRate@{getRate}}
+\index{getRate@{getRate}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{getRate()}{getRate()}}
+{\footnotesize\ttfamily \label{class_p_stats_a7056bb19a53168832c92902017bc842a} 
+int PStats\+::get\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_aa15d30a9ebfadb328ea52051644aefdc}\index{PStats@{PStats}!operator+@{operator+}}
+\index{operator+@{operator+}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{class_p_stats_aa15d30a9ebfadb328ea52051644aefdc} 
+\mbox{\hyperlink{class_p_stats}{PStats}} PStats\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_stats}{PStats}} \&}]{rhs}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_a2804566a8a597631bc32976a29b9df15}\index{PStats@{PStats}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{class_p_stats_a2804566a8a597631bc32976a29b9df15} 
+bool PStats\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_stats}{PStats}} \&}]{rhs}{}\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_a8f7ad3aadacb64cbe4909d3c83fc81f2}\index{PStats@{PStats}!operator=@{operator=}}
+\index{operator=@{operator=}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_p_stats_a8f7ad3aadacb64cbe4909d3c83fc81f2} 
+\mbox{\hyperlink{class_p_stats}{PStats}} \& PStats\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_stats}{PStats}} \&}]{rhs}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+\Hypertarget{class_p_stats_abc6c2b71cdf9ad50349c48aa3254b73c}\index{PStats@{PStats}!setAll@{setAll}}
+\index{setAll@{setAll}!PStats@{PStats}}
+\doxysubsubsection{\texorpdfstring{setAll()}{setAll()}}
+{\footnotesize\ttfamily \label{class_p_stats_abc6c2b71cdf9ad50349c48aa3254b73c} 
+void PStats\+::set\+All (\begin{DoxyParamCaption}\item[{int}]{games}{, }\item[{int}]{wins}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_stats_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_player_stats_8cpp_source}{Player\+Stats.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Player\+Stats.\+h\item 
+Player\+Stats.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+digraph "main"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Main program entry point."];
+  Node1 -> Node2 [id="edge5_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Game::get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game.html#a9b5d5cc069f5d6f874d8be75ae319d1d",tooltip="Get the single instance of the Game class."];
+  Node1 -> Node3 [id="edge6_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Game::start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90",tooltip="Starts a new game session."];
+}

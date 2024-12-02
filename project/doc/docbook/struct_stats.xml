@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_stats" xml:lang="en-US">
+<title>Stats Struct Reference</title>
+<indexterm><primary>Stats</primary></indexterm>
+<para>
+
+<para>Simple structure holding game statistics. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PlayerStats.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Stats:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_stats__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_stats_1a07ad122885c7965e34b130d8bb886767">games</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stats_1a535e69c7c041da153082bdd02f79d4c8">wins</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Simple structure holding game statistics. </para>
+<para>
+Definition at line <link linkend="__player_stats_8h_source_1l00049">49</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_stats_1a07ad122885c7965e34b130d8bb886767"/><section>
+    <title>games</title>
+<indexterm><primary>games</primary><secondary>Stats</secondary></indexterm>
+<indexterm><primary>Stats</primary><secondary>games</secondary></indexterm>
+<para><computeroutput>int Stats::games</computeroutput></para>
+<para>Total games played </para>
+<para>
+Definition at line <link linkend="__player_stats_8h_source_1l00050">50</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<anchor xml:id="_struct_stats_1a535e69c7c041da153082bdd02f79d4c8"/><section>
+    <title>wins</title>
+<indexterm><primary>wins</primary><secondary>Stats</secondary></indexterm>
+<indexterm><primary>Stats</primary><secondary>wins</secondary></indexterm>
+<para><computeroutput>int Stats::wins</computeroutput></para>
+<para>Total games won </para>
+<para>
+Definition at line <link linkend="__player_stats_8h_source_1l00051">51</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="__player_stats_8h">PlayerStats.h</link></section>
+</section>

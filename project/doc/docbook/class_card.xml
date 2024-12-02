@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_card" xml:lang="en-US">
+<title>Card Class Reference</title>
+<indexterm><primary>Card</primary></indexterm>
+<para>
+
+<para>Represents a single playing card in a standard deck. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Card.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Card:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_card__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_class_card_1a5725a8e05afab8cd2f555bd81b069860">Suit</link> { <emphasis role="strong">HEARTS</emphasis>
+, <emphasis role="strong">DIAMONDS</emphasis>
+, <emphasis role="strong">CLUBS</emphasis>
+, <emphasis role="strong">SPADES</emphasis>
+ }</para>
+
+<para>Enumeration of card suits. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_card_1a783f5854cbe8c183ee3d4414c01472c0">Card</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_card_1a9089c1bb6ba4f759dcca716e6ff42f54">Card</link> (int value, <link linkend="_class_card_1a5725a8e05afab8cd2f555bd81b069860">Suit</link> suit)</para>
+
+<para>Constructor with value and suit. </para>
+</listitem>
+            <listitem><para><link linkend="_class_card_1a38013f9863853a4de0d6e1d3be20ca03">Card</link> (const <link linkend="_class_card">Card</link> &amp;other)</para>
+
+<para>Copy constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_card_1a4e05b0b68e43e5e76c6194458cee874f">~Card</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_card_1acc9b1b81d72e09c5a70036d0b91b4b30">getValue</link> () const</para>
+
+<para>Get card&apos;s numeric value. </para>
+</listitem>
+            <listitem><para><link linkend="_class_card_1a5725a8e05afab8cd2f555bd81b069860">Suit</link> <link linkend="_class_card_1acfe58701c3583e9bc86ac2fe1e323516">getSuit</link> () const</para>
+
+<para>Get card&apos;s suit. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_card_1a5e70c8ac94f7e7a95212e7ed00967da5">getSuitString</link> () const</para>
+
+<para>Get string representation of card&apos;s suit. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_card_1aec176a6f90ddf2bac50d3ade4382f0a2">getValueString</link> () const</para>
+
+<para>Get string representation of card&apos;s value. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_card_1a72af3c8dc8c8d30901166e0bb36e0112">operator==</link> (const <link linkend="_class_card">Card</link> &amp;other) const</para>
+
+<para>Equality comparison operator. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_card_1aff83c9c9c5b077e7f7cc6aa738feed25">operator!=</link> (const <link linkend="_class_card">Card</link> &amp;other) const</para>
+
+<para>Inequality comparison operator. </para>
+</listitem>
+            <listitem><para><link linkend="_class_card">Card</link> &amp; <link linkend="_class_card_1ad2ec2f42129790f79948297c128fba9f">operator=</link> (const <link linkend="_class_card">Card</link> &amp;other)</para>
+
+<para>Assignment operator. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_class_card_1a3e30db73c71f875fb07ba04c59afb95e">getNumCardsCreated</link> ()</para>
+
+<para>Get total number of <link linkend="_class_card">Card</link> objects created. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_class_card_1a3bbd82d9047456c6ecbe51a56ca7a584">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_class_card">Card</link> &amp;card)</para>
+
+<para>Stream output operator. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a single playing card in a standard deck. </para>
+
+
+
+<para>This class implements a playing card with a value (1-13) and suit. It includes functionality for comparing cards, converting to string representations, and tracking the total number of cards created. </para>
+<para>
+Definition at line <link linkend="__card_8h_source_1l00022">22</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_card_1a5725a8e05afab8cd2f555bd81b069860"/><section>
+    <title>Suit</title>
+<indexterm><primary>Suit</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Suit</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_class_card_1a5725a8e05afab8cd2f555bd81b069860">Card::Suit</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>Enumeration of card suits. </para>
+</para>
+
+<para>Uses enum class for type safety and scoping </para>
+<para>
+Definition at line <link linkend="__card_8h_source_1l00029">29</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_card_1a783f5854cbe8c183ee3d4414c01472c0"/><section>
+    <title>Card()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<para><computeroutput>Card::Card ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+
+<para>Default constructor Creates Ace of Hearts by default. </para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00019">19</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a9089c1bb6ba4f759dcca716e6ff42f54"/><section>
+    <title>Card()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<para><computeroutput>Card::Card (int value, <link linkend="_class_card_1a5725a8e05afab8cd2f555bd81b069860">Suit</link> suit)</computeroutput></para><para>
+
+<para>Constructor with value and suit. </para>
+</para>
+
+<para>Parameterized constructor.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para><link linkend="_class_card">Card</link>&apos;s numeric value (1-13) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>suit</entry><entry>
+<para><link linkend="_class_card">Card</link>&apos;s suit </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::invalid_argument</entry><entry>
+<para>if value is outside valid range</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para><link linkend="_class_card">Card</link> value (1-13) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>suit</entry><entry>
+<para><link linkend="_class_card">Card</link> suit </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00028">28</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a38013f9863853a4de0d6e1d3be20ca03"/><section>
+    <title>Card()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>Card</secondary></indexterm>
+<para><computeroutput>Card::Card (const <link linkend="_class_card">Card</link> &amp; other)</computeroutput></para><para>
+
+<para>Copy constructor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para><link linkend="_class_card">Card</link> to copy from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00038">38</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a4e05b0b68e43e5e76c6194458cee874f"/><section>
+    <title>~Card()</title>
+<indexterm><primary>~Card</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>~Card</secondary></indexterm>
+<para><computeroutput>Card::~Card ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Destructor Decrements card count. </para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00046">46</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_card_1a3e30db73c71f875fb07ba04c59afb95e"/><section>
+    <title>getNumCardsCreated()</title>
+<indexterm><primary>getNumCardsCreated</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getNumCardsCreated</secondary></indexterm>
+<para><computeroutput>int Card::getNumCardsCreated ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Get total number of <link linkend="_class_card">Card</link> objects created. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int Number of cards created</para>
+
+<para>int Number of cards currently in existence </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00125">125</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1acfe58701c3583e9bc86ac2fe1e323516"/><section>
+    <title>getSuit()</title>
+<indexterm><primary>getSuit</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getSuit</secondary></indexterm>
+<para><computeroutput><link linkend="_class_card_1a5725a8e05afab8cd2f555bd81b069860">Card::Suit</link> Card::getSuit ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get card&apos;s suit. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Suit Enumerated suit value </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8h_source_1l00129">129</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a5e70c8ac94f7e7a95212e7ed00967da5"/><section>
+    <title>getSuitString()</title>
+<indexterm><primary>getSuitString</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getSuitString</secondary></indexterm>
+<para><computeroutput>string Card::getSuitString ( ) const</computeroutput></para><para>
+
+<para>Get string representation of card&apos;s suit. </para>
+</para>
+
+<para>Get string representation of card suit.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string Suit name as string</para>
+
+<para>string Name of suit </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00066">66</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_card_a5e70c8ac94f7e7a95212e7ed00967da5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_card_1acc9b1b81d72e09c5a70036d0b91b4b30"/><section>
+    <title>getValue()</title>
+<indexterm><primary>getValue</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getValue</secondary></indexterm>
+<para><computeroutput>int Card::getValue ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get card&apos;s numeric value. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int Value between 1-13 </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8h_source_1l00128">128</link> of file <link linkend="__card_8h_source">Card.h</link>.</para>
+</section>
+<anchor xml:id="_class_card_1aec176a6f90ddf2bac50d3ade4382f0a2"/><section>
+    <title>getValueString()</title>
+<indexterm><primary>getValueString</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>getValueString</secondary></indexterm>
+<para><computeroutput>string Card::getValueString ( ) const</computeroutput></para><para>
+
+<para>Get string representation of card&apos;s value. </para>
+</para>
+
+<para>Get string representation of card value.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string <link linkend="_class_card">Card</link> value as string (e.g., &quot;Ace&quot;, &quot;King&quot;, etc.)</para>
+
+<para>string <link linkend="_class_card">Card</link> value or face card name </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00080">80</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_card_aec176a6f90ddf2bac50d3ade4382f0a2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_card_1aff83c9c9c5b077e7f7cc6aa738feed25"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool Card::operator!= (const <link linkend="_class_card">Card</link> &amp; other) const</computeroutput></para><para>
+
+<para>Inequality comparison operator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para><link linkend="_class_card">Card</link> to compare with </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool True if cards differ in value or suit </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00104">104</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1ad2ec2f42129790f79948297c128fba9f"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_card">Card</link> &amp; Card::operator= (const <link linkend="_class_card">Card</link> &amp; other)</computeroutput></para><para>
+
+<para>Assignment operator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para><link linkend="_class_card">Card</link> to assign from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_class_card">Card</link>&amp; Reference to this card </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00113">113</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_card_1a72af3c8dc8c8d30901166e0bb36e0112"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool Card::operator== (const <link linkend="_class_card">Card</link> &amp; other) const</computeroutput></para><para>
+
+<para>Equality comparison operator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para><link linkend="_class_card">Card</link> to compare with </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool True if cards have same value and suit</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para><link linkend="_class_card">Card</link> to compare with </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool True if cards match in value and suit </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__card_8cpp_source_1l00095">95</link> of file <link linkend="__card_8cpp_source">Card.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_class_card_1a3bbd82d9047456c6ecbe51a56ca7a584"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>Card</secondary></indexterm>
+<indexterm><primary>Card</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_class_card">Card</link> &amp; card)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>Stream output operator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>os</entry><entry>
+<para>Output stream </para>
+</entry>
+                            </row>
+                            <row>
+<entry>card</entry><entry>
+<para><link linkend="_class_card">Card</link> to output </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::ostream&amp; Reference to output stream </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__card_8h">Card.h</link><link linkend="__card_8cpp">Card.cpp</link></section>
+</section>

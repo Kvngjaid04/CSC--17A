@@ -1,0 +1,61 @@
+\doxysection{Black\+Jack\+Game.\+h}
+\hypertarget{_black_jack_game_8h_source}{}\label{_black_jack_game_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00001}00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00002}00002\ \textcolor{comment}{\ *\ File:\ \ \ BlackJackGame.h}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Author:\ Ireoluwa\ Dairo}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Created\ on\ November\ 27,\ 2024,\ 3:52\ PM}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ BLACKJACK\_H}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ BLACKJACK\_H}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}Deck.h"{}}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}SaveGame.h"{}}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00017}\mbox{\hyperlink{class_game}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}\ \{}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00018}00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Get\ singleton\ instance}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game}{Game}}\&\ get();}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00021}00021\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Start\ game\ session}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ start();}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00024}00024\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Delete\ copy/move\ operations}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game}{Game}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game}{Game}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00028}00028\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00029}00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Constructor/Destructor}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}();}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_game}{\string~Game}}();}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00033}00033\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ Game\ flow\ methods}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{void}\ init();\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ game}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{void}\ loadGame();\ \ \ \ \ \textcolor{comment}{//\ Load\ saved\ game}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{void}\ newGame();\ \ \ \ \ \ \textcolor{comment}{//\ Start\ new\ game}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}\ mainLoop();\ \ \ \ \ \textcolor{comment}{//\ Main\ game\ loop}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ round();\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Play\ one\ round}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ deal();\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deal\ initial\ cards}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ plyrTurn();\ \ \ \ \ \textcolor{comment}{//\ Player's\ turn}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ dlrTurn();\ \ \ \ \ \ \textcolor{comment}{//\ Dealer's\ turn}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{void}\ endRound();\ \ \ \ \ \textcolor{comment}{//\ Handle\ round\ end}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ getBet();\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ bet\ amount}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ saveGame();\ \ \ \ \ \textcolor{comment}{//\ Save\ current\ game}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ Game\ components}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{class_deck}{Deck<Card>}}\ deck;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Card\ deck\ -\/\ specify\ Card\ as\ template\ parameter}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00049}00049\ \ \ \ \ unique\_ptr<Human>\ plyr;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Player}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00050}00050\ \ \ \ \ unique\_ptr<Dealer>\ dlr;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dealer}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{string}\ user;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Username}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{struct_save}{Save}}\ save;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ data}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00053}00053\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game}{Game}}*\ inst;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Singleton\ instance}}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00055}00055\ \};}
+\DoxyCodeLine{\Hypertarget{_black_jack_game_8h_source_l00056}00056\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

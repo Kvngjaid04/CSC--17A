@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_8cpp" xml:lang="en-US">
+<title>Player.cpp File Reference</title>
+<indexterm><primary>Player.cpp</primary></indexterm>
+<para>
+
+<para>Implementation of <link linkend="_class_player">Player</link> base class and derived Human/Dealer classes. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Player.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting>Include dependency graph for Player.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_player_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Implementation of <link linkend="_class_player">Player</link> base class and derived Human/Dealer classes. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ireoluwa Dairo </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2024-11-27 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="__player_8cpp_source">Player.cpp</link>.</para>
+</section>
+</section>

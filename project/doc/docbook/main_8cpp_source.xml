@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp_source" xml:lang="en-US">
+<title>main.cpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_main_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_main_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;cstdlib&gt;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__black_jack_game_8h">BlackjackGame.h</link>&quot;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00011"/>00011 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="_main_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_main_8cpp_source_1l00017"/><link linkend="_main_8cpp_1acb59d740447090dfc6783163b4a1e60b">00017</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_main_8cpp_1acb59d740447090dfc6783163b4a1e60b">runBlackjackTest</link>()&#32;{
+<anchor xml:id="_main_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="_main_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game">Game</link>&amp;&#32;game&#32;=&#32;<link linkend="_class_game_1a9b5d5cc069f5d6f874d8be75ae319d1d">Game::get</link>();
+<anchor xml:id="_main_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;game.<link linkend="_class_game_1a3d9b98f7c4a96ecf578f75b96c9f0e90">start</link>();
+<anchor xml:id="_main_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;exception&amp;&#32;e)&#32;{
+<anchor xml:id="_main_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Test&#32;failed:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;e.what()&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_main_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00025"/>00025 }
+<anchor xml:id="_main_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_main_8cpp_source_1l00031"/><link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">00031</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link>()&#32;{
+<anchor xml:id="_main_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="_main_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game">Game</link>&amp;&#32;game&#32;=&#32;<link linkend="_class_game_1a9b5d5cc069f5d6f874d8be75ae319d1d">Game::get</link>();
+<anchor xml:id="_main_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;game.<link linkend="_class_game_1a3d9b98f7c4a96ecf578f75b96c9f0e90">start</link>();
+<anchor xml:id="_main_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;exception&amp;&#32;e)&#32;{
+<anchor xml:id="_main_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Game&#32;encountered&#32;an&#32;error:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;e.what()&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_main_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="_main_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;
+<anchor xml:id="_main_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_main_8cpp_source_1l00042"/>00042 }
+</programlisting></section>
