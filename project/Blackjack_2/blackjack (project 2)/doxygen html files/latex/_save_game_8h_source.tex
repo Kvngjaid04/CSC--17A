@@ -1,0 +1,35 @@
+\doxysection{Save\+Game.\+h}
+\hypertarget{_save_game_8h_source}{}\label{_save_game_8h_source}\mbox{\hyperlink{_save_game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SAVEGAME\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SAVEGAME\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_save}{Save}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_save_a87d4df2d25c8c7845cc8e2b31c3cf8c6}{name}}[30];\ \ }
+\DoxyCodeLine{00021\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_a59f394a05cbf44ae85e90576e6cb34e2}{funds}};\ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_a6645464a8d38439095ec57b31ed264cb}{wins}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_a590de8d98933b1fa1181b5df23fdf80c}{games}};\ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_a66849c66e30e65542ac629864d9b3da9}{gmsAll}};\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_save_a97a5d9075e6b9d2e4887d08a9815144d}{winsAll}};\ \ \ \ }
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_save_game}{SaveGame}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_game_aee1d61f41270f9256f47a858e00db05a}{load}}(\mbox{\hyperlink{struct_save}{Save}}\&\ data,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00048\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_game_a4657b0a4750db6c1ba1a8f4033a46372}{save}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_save}{Save}}\&\ data,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_game_abf8a728e1a1a764a838a1456f0c35ef5}{valid}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{00056\ \ \ \ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ fname(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ user);}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+<map id="Player::clear" name="Player::clear">
+<area shape="rect" id="Node000001" title="Clear player&#39;s hand." alt="" coords="165,5,259,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a749d2c00e1fe0f5c2746f7505a58c062" title="Virtual destructor." alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,21,117,21,117,16,149,16"/>
+</map>

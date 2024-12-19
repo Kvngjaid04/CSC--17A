@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__black_jack_game_8h_source" xml:lang="en-US">
+<title>BlackJackGame.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__black_jack_game_8h_source_1l00001"/>00001 
+<anchor xml:id="__black_jack_game_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;BLACKJACK_H</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;BLACKJACK_H</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00010"/>00010 
+<anchor xml:id="__black_jack_game_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__deck_8h">Deck.h</link>&quot;</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__player_8h">Player.h</link>&quot;</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__save_game_8h">SaveGame.h</link>&quot;</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00015"/>00015 
+<anchor xml:id="__black_jack_game_8h_source_1l00016"/>00016 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__black_jack_game_8h_source_1l00017"/>00017 
+<anchor xml:id="__black_jack_game_8h_source_1l00026"/><link linkend="_class_game">00026</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game">Game</link>&#32;{
+<anchor xml:id="__black_jack_game_8h_source_1l00027"/>00027 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__black_jack_game_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_game">Game</link>&amp;&#32;<link linkend="_class_game_1a9b5d5cc069f5d6f874d8be75ae319d1d">get</link>();
+<anchor xml:id="__black_jack_game_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;
+<anchor xml:id="__black_jack_game_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_1a3d9b98f7c4a96ecf578f75b96c9f0e90">start</link>();
+<anchor xml:id="__black_jack_game_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;
+<anchor xml:id="__black_jack_game_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Delete&#32;copy/move&#32;operations&#32;to&#32;ensure&#32;singleton&#32;pattern</emphasis>
+<anchor xml:id="__black_jack_game_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<link linkend="_class_game">Game</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_game">Game</link>&amp;)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+<anchor xml:id="__black_jack_game_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<link linkend="_class_game">Game</link>&amp;&#32;operator=(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_game">Game</link>&amp;)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+<anchor xml:id="__black_jack_game_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;
+<anchor xml:id="__black_jack_game_8h_source_1l00045"/>00045 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__black_jack_game_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_class_game">Game</link>();
+<anchor xml:id="__black_jack_game_8h_source_1l00050"/>00050 
+<anchor xml:id="__black_jack_game_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<link linkend="_class_game">~Game</link>();
+<anchor xml:id="__black_jack_game_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;
+<anchor xml:id="__black_jack_game_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;init();
+<anchor xml:id="__black_jack_game_8h_source_1l00060"/>00060 
+<anchor xml:id="__black_jack_game_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;loadGame();
+<anchor xml:id="__black_jack_game_8h_source_1l00065"/>00065 
+<anchor xml:id="__black_jack_game_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;newGame();
+<anchor xml:id="__black_jack_game_8h_source_1l00070"/>00070 
+<anchor xml:id="__black_jack_game_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;mainLoop();
+<anchor xml:id="__black_jack_game_8h_source_1l00075"/>00075 
+<anchor xml:id="__black_jack_game_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;round();
+<anchor xml:id="__black_jack_game_8h_source_1l00080"/>00080 
+<anchor xml:id="__black_jack_game_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;deal();
+<anchor xml:id="__black_jack_game_8h_source_1l00085"/>00085 
+<anchor xml:id="__black_jack_game_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;plyrTurn();
+<anchor xml:id="__black_jack_game_8h_source_1l00090"/>00090 
+<anchor xml:id="__black_jack_game_8h_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;dlrTurn();
+<anchor xml:id="__black_jack_game_8h_source_1l00095"/>00095 
+<anchor xml:id="__black_jack_game_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;endRound();
+<anchor xml:id="__black_jack_game_8h_source_1l00100"/>00100 
+<anchor xml:id="__black_jack_game_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;getBet();
+<anchor xml:id="__black_jack_game_8h_source_1l00106"/>00106 
+<anchor xml:id="__black_jack_game_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;saveGame();
+<anchor xml:id="__black_jack_game_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;
+<anchor xml:id="__black_jack_game_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<link linkend="_class_deck">Deck&lt;Card&gt;</link>&#32;deck;
+<anchor xml:id="__black_jack_game_8h_source_1l00114"/>00114 
+<anchor xml:id="__black_jack_game_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;unique_ptr&lt;Human&gt;&#32;plyr;
+<anchor xml:id="__black_jack_game_8h_source_1l00117"/>00117 
+<anchor xml:id="__black_jack_game_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;unique_ptr&lt;Dealer&gt;&#32;dlr;
+<anchor xml:id="__black_jack_game_8h_source_1l00120"/>00120 
+<anchor xml:id="__black_jack_game_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;user;
+<anchor xml:id="__black_jack_game_8h_source_1l00123"/>00123 
+<anchor xml:id="__black_jack_game_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<link linkend="_struct_save">Save</link>&#32;save;
+<anchor xml:id="__black_jack_game_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;
+<anchor xml:id="__black_jack_game_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_game">Game</link>*&#32;inst;
+<anchor xml:id="__black_jack_game_8h_source_1l00129"/>00129 };
+<anchor xml:id="__black_jack_game_8h_source_1l00130"/>00130 
+<anchor xml:id="__black_jack_game_8h_source_1l00131"/>00131 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

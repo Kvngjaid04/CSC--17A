@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_stats_8h_source" xml:lang="en-US">
+<title>PlayerStats.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__player_stats_8h_source_1l00001"/>00001 
+<anchor xml:id="__player_stats_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;PLAYERSTATS_H</emphasis>
+<anchor xml:id="__player_stats_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;PLAYERSTATS_H</emphasis>
+<anchor xml:id="__player_stats_8h_source_1l00010"/>00010 
+<anchor xml:id="__player_stats_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__player_stats_8h_source_1l00012"/>00012 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__player_stats_8h_source_1l00013"/>00013 
+<anchor xml:id="__player_stats_8h_source_1l00019"/><link linkend="_class_game_res">00019</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game_res">GameRes</link>&#32;{
+<anchor xml:id="__player_stats_8h_source_1l00020"/>00020 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__player_stats_8h_source_1l00025"/><link linkend="_class_game_res_1a8e24d2e6c2a3455d6c13c081ad832269">00025</link> &#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_game_res_1a8e24d2e6c2a3455d6c13c081ad832269">getAmt</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;amt;&#32;}
+<anchor xml:id="__player_stats_8h_source_1l00026"/>00026 
+<anchor xml:id="__player_stats_8h_source_1l00031"/><link linkend="_class_game_res_1adad8fbe33cfe6f4f8279dee29bd0a3b7">00031</link> &#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_game_res_1adad8fbe33cfe6f4f8279dee29bd0a3b7">isWin</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;win;&#32;}
+<anchor xml:id="__player_stats_8h_source_1l00032"/>00032 &#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00038"/><link linkend="_class_game_res_1a52e74b78aaef74ae2aa3968ebdbb2314">00038</link> &#32;&#32;&#32;<link linkend="_class_game_res_1a52e74b78aaef74ae2aa3968ebdbb2314">GameRes</link>(<emphasis role="keywordtype">bool</emphasis>&#32;win&#32;=&#32;<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="keywordtype">int</emphasis>&#32;amt&#32;=&#32;0)&#32;:&#32;win(win),&#32;amt(amt)&#32;{}
+<anchor xml:id="__player_stats_8h_source_1l00039"/>00039 &#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00040"/>00040 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__player_stats_8h_source_1l00041"/>00041 &#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;win;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00042"/>00042 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;amt;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00043"/>00043 };
+<anchor xml:id="__player_stats_8h_source_1l00044"/>00044 
+<anchor xml:id="__player_stats_8h_source_1l00049"/><link linkend="_struct_stats">00049</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_stats">Stats</link>&#32;{
+<anchor xml:id="__player_stats_8h_source_1l00050"/><link linkend="_struct_stats_1a07ad122885c7965e34b130d8bb886767">00050</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_stats_1a07ad122885c7965e34b130d8bb886767">games</link>;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00051"/><link linkend="_struct_stats_1a535e69c7c041da153082bdd02f79d4c8">00051</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_stats_1a535e69c7c041da153082bdd02f79d4c8">wins</link>;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00052"/>00052 };
+<anchor xml:id="__player_stats_8h_source_1l00053"/>00053 
+<anchor xml:id="__player_stats_8h_source_1l00059"/><link linkend="_class_p_stats">00059</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_p_stats">PStats</link>&#32;{
+<anchor xml:id="__player_stats_8h_source_1l00060"/>00060 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__player_stats_8h_source_1l00065"/>00065 &#32;&#32;&#32;<link linkend="_class_p_stats_1ad70a5048fd1426d2b59c4f3e289551b3">PStats</link>(<emphasis role="keywordtype">int</emphasis>&#32;max&#32;=&#32;100);
+<anchor xml:id="__player_stats_8h_source_1l00066"/>00066 
+<anchor xml:id="__player_stats_8h_source_1l00071"/>00071 &#32;&#32;&#32;<link linkend="_class_p_stats_1ad70a5048fd1426d2b59c4f3e289551b3">PStats</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_p_stats">PStats</link>&amp;&#32;other);
+<anchor xml:id="__player_stats_8h_source_1l00072"/>00072 
+<anchor xml:id="__player_stats_8h_source_1l00074"/>00074 &#32;&#32;&#32;<link linkend="_class_p_stats_1a72f828eccdf8b9515b8d60cd08a424ce">~PStats</link>();
+<anchor xml:id="__player_stats_8h_source_1l00075"/>00075 &#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00081"/>00081 &#32;&#32;&#32;<link linkend="_class_p_stats">PStats</link>&amp;&#32;<link linkend="_class_p_stats_1a8f7ad3aadacb64cbe4909d3c83fc81f2">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_p_stats">PStats</link>&amp;&#32;rhs);
+<anchor xml:id="__player_stats_8h_source_1l00082"/>00082 
+<anchor xml:id="__player_stats_8h_source_1l00088"/>00088 &#32;&#32;&#32;<link linkend="_class_p_stats">PStats</link>&#32;<link linkend="_class_p_stats_1aa15d30a9ebfadb328ea52051644aefdc">operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_p_stats">PStats</link>&amp;&#32;rhs)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__player_stats_8h_source_1l00089"/>00089 
+<anchor xml:id="__player_stats_8h_source_1l00095"/>00095 &#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_p_stats_1a2804566a8a597631bc32976a29b9df15">operator&lt;</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_p_stats">PStats</link>&amp;&#32;rhs)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__player_stats_8h_source_1l00096"/>00096 &#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00101"/>00101 &#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_stats_1a497ca6c7be75c1cffb6c9887e6182732">add</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_game_res">GameRes</link>&amp;&#32;res);
+<anchor xml:id="__player_stats_8h_source_1l00102"/>00102 
+<anchor xml:id="__player_stats_8h_source_1l00107"/>00107 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_p_stats_1a7056bb19a53168832c92902017bc842a">getRate</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__player_stats_8h_source_1l00108"/>00108 
+<anchor xml:id="__player_stats_8h_source_1l00114"/>00114 &#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_stats_1abc6c2b71cdf9ad50349c48aa3254b73c">setAll</link>(<emphasis role="keywordtype">int</emphasis>&#32;games,&#32;<emphasis role="keywordtype">int</emphasis>&#32;wins);
+<anchor xml:id="__player_stats_8h_source_1l00115"/>00115 
+<anchor xml:id="__player_stats_8h_source_1l00120"/>00120 &#32;&#32;&#32;<link linkend="_struct_stats">Stats</link>&#32;<link linkend="_class_p_stats_1a00b301240ffc5f899e123f81b7adb30f">getAll</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__player_stats_8h_source_1l00121"/>00121 &#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00122"/>00122 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__player_stats_8h_source_1l00123"/>00123 &#32;&#32;&#32;<link linkend="_class_game_res">GameRes</link>*&#32;res;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00124"/>00124 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;size;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00125"/>00125 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;max;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00126"/>00126 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;rate;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00127"/>00127 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;games;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00128"/>00128 &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;wins;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_stats_8h_source_1l00129"/>00129 &#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;num;
+<anchor xml:id="__player_stats_8h_source_1l00135"/><link linkend="_class_p_stats_1a31ced6147321a6476baab209e9dd147c">00135</link> &#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_stats_1a31ced6147321a6476baab209e9dd147c">showAll</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_p_stats">PStats</link>&amp;&#32;st);
+<anchor xml:id="__player_stats_8h_source_1l00136"/>00136 };
+<anchor xml:id="__player_stats_8h_source_1l00137"/>00137 
+<anchor xml:id="__player_stats_8h_source_1l00138"/>00138 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

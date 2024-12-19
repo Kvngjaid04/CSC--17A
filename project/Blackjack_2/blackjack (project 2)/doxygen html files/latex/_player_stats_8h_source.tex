@@ -1,0 +1,64 @@
+\doxysection{Player\+Stats.\+h}
+\hypertarget{_player_stats_8h_source}{}\label{_player_stats_8h_source}\mbox{\hyperlink{_player_stats_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ PLAYERSTATS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ PLAYERSTATS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_res}{GameRes}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_res_a8e24d2e6c2a3455d6c13c081ad832269}{getAmt}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ amt;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_res_adad8fbe33cfe6f4f8279dee29bd0a3b7}{isWin}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ win;\ \}}
+\DoxyCodeLine{00032\ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \mbox{\hyperlink{class_game_res_a52e74b78aaef74ae2aa3968ebdbb2314}{GameRes}}(\textcolor{keywordtype}{bool}\ win\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ amt\ =\ 0)\ :\ win(win),\ amt(amt)\ \{\}}
+\DoxyCodeLine{00039\ \ \ \ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \textcolor{keywordtype}{bool}\ win;\ }
+\DoxyCodeLine{00042\ \ \ \ \textcolor{keywordtype}{int}\ amt;\ \ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_stats}{Stats}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_a07ad122885c7965e34b130d8bb886767}{games}};\ }
+\DoxyCodeLine{00051\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_a535e69c7c041da153082bdd02f79d4c8}{wins}};\ \ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_p_stats}{PStats}}\ \{}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \mbox{\hyperlink{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}{PStats}}(\textcolor{keywordtype}{int}\ max\ =\ 100);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \mbox{\hyperlink{class_p_stats_ad70a5048fd1426d2b59c4f3e289551b3}{PStats}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ other);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \mbox{\hyperlink{class_p_stats_a72f828eccdf8b9515b8d60cd08a424ce}{\string~PStats}}();}
+\DoxyCodeLine{00075\ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ \mbox{\hyperlink{class_p_stats_a8f7ad3aadacb64cbe4909d3c83fc81f2}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ rhs);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \mbox{\hyperlink{class_p_stats}{PStats}}\ \mbox{\hyperlink{class_p_stats_aa15d30a9ebfadb328ea52051644aefdc}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_p_stats_a2804566a8a597631bc32976a29b9df15}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_stats_a497ca6c7be75c1cffb6c9887e6182732}{add}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_res}{GameRes}}\&\ res);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_p_stats_a7056bb19a53168832c92902017bc842a}{getRate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_stats_abc6c2b71cdf9ad50349c48aa3254b73c}{setAll}}(\textcolor{keywordtype}{int}\ games,\ \textcolor{keywordtype}{int}\ wins);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \mbox{\hyperlink{struct_stats}{Stats}}\ \mbox{\hyperlink{class_p_stats_a00b301240ffc5f899e123f81b7adb30f}{getAll}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \ \ \ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \mbox{\hyperlink{class_game_res}{GameRes}}*\ res;\ \ }
+\DoxyCodeLine{00124\ \ \ \ \textcolor{keywordtype}{int}\ size;\ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \textcolor{keywordtype}{int}\ max;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \textcolor{keywordtype}{int}\ rate;\ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \textcolor{keywordtype}{int}\ games;\ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \textcolor{keywordtype}{int}\ wins;\ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ num;}
+\DoxyCodeLine{00135\ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_stats_a31ced6147321a6476baab209e9dd147c}{showAll}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_p_stats}{PStats}}\&\ st);}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,93 @@
+\doxysection{Game\+Res Class Reference}
+\hypertarget{class_game_res}{}\label{class_game_res}\index{GameRes@{GameRes}}
+
+
+Represents the result of a single game Stores win/loss status and amount won/lost.  
+
+
+
+
+{\ttfamily \#include $<$Player\+Stats.\+h$>$}
+
+
+
+Collaboration diagram for Game\+Res\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{class_game_res__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_game_res_a8e24d2e6c2a3455d6c13c081ad832269}{get\+Amt}} () const
+\begin{DoxyCompactList}\small\item\em Get amount won/lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_res_adad8fbe33cfe6f4f8279dee29bd0a3b7}{is\+Win}} () const
+\begin{DoxyCompactList}\small\item\em Check if game was won. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_res_a52e74b78aaef74ae2aa3968ebdbb2314}{Game\+Res}} (bool win=false, int amt=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the result of a single game Stores win/loss status and amount won/lost. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_res_a52e74b78aaef74ae2aa3968ebdbb2314}\index{GameRes@{GameRes}!GameRes@{GameRes}}
+\index{GameRes@{GameRes}!GameRes@{GameRes}}
+\doxysubsubsection{\texorpdfstring{GameRes()}{GameRes()}}
+{\footnotesize\ttfamily \label{class_game_res_a52e74b78aaef74ae2aa3968ebdbb2314} 
+Game\+Res\+::\+Game\+Res (\begin{DoxyParamCaption}\item[{bool}]{win}{ = {\ttfamily false}, }\item[{int}]{amt}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Whether game was won \\
+\hline
+{\em amt} & Amount won/lost \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_res_a8e24d2e6c2a3455d6c13c081ad832269}\index{GameRes@{GameRes}!getAmt@{getAmt}}
+\index{getAmt@{getAmt}!GameRes@{GameRes}}
+\doxysubsubsection{\texorpdfstring{getAmt()}{getAmt()}}
+{\footnotesize\ttfamily \label{class_game_res_a8e24d2e6c2a3455d6c13c081ad832269} 
+int Game\+Res\+::get\+Amt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get amount won/lost. 
+
+\begin{DoxyReturn}{Returns}
+int Amount from game result 
+\end{DoxyReturn}
+\Hypertarget{class_game_res_adad8fbe33cfe6f4f8279dee29bd0a3b7}\index{GameRes@{GameRes}!isWin@{isWin}}
+\index{isWin@{isWin}!GameRes@{GameRes}}
+\doxysubsubsection{\texorpdfstring{isWin()}{isWin()}}
+{\footnotesize\ttfamily \label{class_game_res_adad8fbe33cfe6f4f8279dee29bd0a3b7} 
+bool Game\+Res\+::is\+Win (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if game was won. 
+
+\begin{DoxyReturn}{Returns}
+bool True if game was won 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_res_adad8fbe33cfe6f4f8279dee29bd0a3b7_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_player_stats_8h}{Player\+Stats.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_stats" xml:lang="en-US">
+<title>PStats Class Reference</title>
+<indexterm><primary>PStats</primary></indexterm>
+<para>
+
+<para><link linkend="_class_player">Player</link> statistics manager Tracks game results and calculates statistics. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PlayerStats.h&gt;</computeroutput>
+</para>
+Collaboration diagram for PStats:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_p_stats__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_p_stats_1ad70a5048fd1426d2b59c4f3e289551b3">PStats</link> (int max=100)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_stats_1ac2ee6a18282878cd56ca25af109b97d2">PStats</link> (const <link linkend="_class_p_stats">PStats</link> &amp;other)</para>
+
+<para>Copy constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_stats_1a72f828eccdf8b9515b8d60cd08a424ce">~PStats</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_stats">PStats</link> &amp; <link linkend="_class_p_stats_1a8f7ad3aadacb64cbe4909d3c83fc81f2">operator=</link> (const <link linkend="_class_p_stats">PStats</link> &amp;rhs)</para>
+
+<para>Assignment operator. </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_stats">PStats</link> <link linkend="_class_p_stats_1aa15d30a9ebfadb328ea52051644aefdc">operator+</link> (const <link linkend="_class_p_stats">PStats</link> &amp;rhs) const</para>
+
+<para>Addition operator. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_p_stats_1a2804566a8a597631bc32976a29b9df15">operator&lt;</link> (const <link linkend="_class_p_stats">PStats</link> &amp;rhs) const</para>
+
+<para>Less than operator. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_stats_1a497ca6c7be75c1cffb6c9887e6182732">add</link> (const <link linkend="_class_game_res">GameRes</link> &amp;res)</para>
+
+<para>Add game result. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_p_stats_1a7056bb19a53168832c92902017bc842a">getRate</link> () const</para>
+
+<para>Get win rate percentage. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_stats_1abc6c2b71cdf9ad50349c48aa3254b73c">setAll</link> (int games, int wins)</para>
+
+<para>Set total games and wins. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_stats">Stats</link> <link linkend="_class_p_stats_1a00b301240ffc5f899e123f81b7adb30f">getAll</link> () const</para>
+
+<para>Get all statistics. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_p_stats_1a31ced6147321a6476baab209e9dd147c">showAll</link> (const <link linkend="_class_p_stats">PStats</link> &amp;st)</para>
+
+<para>Friend function to display all statistics. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_player">Player</link> statistics manager Tracks game results and calculates statistics. </para>
+<para>
+Definition at line <link linkend="__player_stats_8h_source_1l00059">59</link> of file <link linkend="__player_stats_8h_source">PlayerStats.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_p_stats_1ad70a5048fd1426d2b59c4f3e289551b3"/><section>
+    <title>PStats()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>PStats</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>PStats</secondary></indexterm>
+<para><computeroutput>PStats::PStats (int maxSz = <computeroutput>100</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>max</entry><entry>
+<para>Maximum number of results to store</para>
+</entry>
+                            </row>
+                            <row>
+<entry>maxSz</entry><entry>
+<para>Maximum number of game results to store </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>runtime_error</entry><entry>
+<para>if memory allocation fails </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00019">19</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_stats_1ac2ee6a18282878cd56ca25af109b97d2"/><section>
+    <title>PStats()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>PStats</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>PStats</secondary></indexterm>
+<para><computeroutput>PStats::PStats (const <link linkend="_class_p_stats">PStats</link> &amp; old)</computeroutput></para><para>
+
+<para>Copy constructor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>other</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> to copy from</para>
+</entry>
+                            </row>
+                            <row>
+<entry>old</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> object to copy from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>runtime_error</entry><entry>
+<para>if memory allocation fails </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00038">38</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_stats_1a72f828eccdf8b9515b8d60cd08a424ce"/><section>
+    <title>~PStats()</title>
+<indexterm><primary>~PStats</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>~PStats</secondary></indexterm>
+<para><computeroutput>PStats::~PStats ( )</computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+
+<para>Destructor Frees allocated memory and decrements counter. </para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00060">60</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_stats_1a497ca6c7be75c1cffb6c9887e6182732"/><section>
+    <title>add()</title>
+<indexterm><primary>add</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void PStats::add (const <link linkend="_class_game_res">GameRes</link> &amp; newRes)</computeroutput></para><para>
+
+<para>Add game result. </para>
+</para>
+
+<para>Add new game result.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>res</entry><entry>
+<para>Result to add</para>
+</entry>
+                            </row>
+                            <row>
+<entry>newRes</entry><entry>
+<para><link linkend="_class_game">Game</link> result to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>runtime_error</entry><entry>
+<para>if results array is full </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00120">120</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_p_stats_a497ca6c7be75c1cffb6c9887e6182732_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_p_stats_a497ca6c7be75c1cffb6c9887e6182732_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_p_stats_1a00b301240ffc5f899e123f81b7adb30f"/><section>
+    <title>getAll()</title>
+<indexterm><primary>getAll</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>getAll</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stats">Stats</link> PStats::getAll ( ) const</computeroutput></para><para>
+
+<para>Get all statistics. </para>
+</para>
+
+<para>Get games and wins stats.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_struct_stats">Stats</link> Structure with games and wins</para>
+
+<para><link linkend="_struct_stats">Stats</link> Structure containing games and wins </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00111">111</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_stats_1a7056bb19a53168832c92902017bc842a"/><section>
+    <title>getRate()</title>
+<indexterm><primary>getRate</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>getRate</secondary></indexterm>
+<para><computeroutput>int PStats::getRate ( ) const</computeroutput></para><para>
+
+<para>Get win rate percentage. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int Win rate as percentage </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00140">140</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_p_stats_a7056bb19a53168832c92902017bc842a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_p_stats_1aa15d30a9ebfadb328ea52051644aefdc"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_stats">PStats</link> PStats::operator+ (const <link linkend="_class_p_stats">PStats</link> &amp; rhs) const</computeroutput></para><para>
+
+<para>Addition operator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rhs</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_class_p_stats">PStats</link> Combined statistics </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00158">158</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_stats_1a2804566a8a597631bc32976a29b9df15"/><section>
+    <title>operator&lt;()</title>
+<indexterm><primary>operator&lt;</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>operator&lt;</secondary></indexterm>
+<para><computeroutput>bool PStats::operator&lt; (const <link linkend="_class_p_stats">PStats</link> &amp; rhs) const</computeroutput></para><para>
+
+<para>Less than operator. </para>
+</para>
+
+<para>Less than comparison operator.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rhs</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> to compare with </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool True if this win rate is less than rhs </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00149">149</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_stats_1a8f7ad3aadacb64cbe4909d3c83fc81f2"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_stats">PStats</link> &amp; PStats::operator= (const <link linkend="_class_p_stats">PStats</link> &amp; rhs)</computeroutput></para><para>
+
+<para>Assignment operator. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rhs</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> to assign from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_class_p_stats">PStats</link>&amp; Reference to this object</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rhs</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> to assign from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_class_p_stats">PStats</link>&amp; Reference to this object </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>runtime_error</entry><entry>
+<para>if memory allocation fails </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00071">71</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_stats_1abc6c2b71cdf9ad50349c48aa3254b73c"/><section>
+    <title>setAll()</title>
+<indexterm><primary>setAll</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>setAll</secondary></indexterm>
+<para><computeroutput>void PStats::setAll (int gms, int wns)</computeroutput></para><para>
+
+<para>Set total games and wins. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>games</entry><entry>
+<para>Total games </para>
+</entry>
+                            </row>
+                            <row>
+<entry>wins</entry><entry>
+<para>Total wins</para>
+</entry>
+                            </row>
+                            <row>
+<entry>gms</entry><entry>
+<para>Total games </para>
+</entry>
+                            </row>
+                            <row>
+<entry>wns</entry><entry>
+<para>Total wins </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_stats_8cpp_source_1l00097">97</link> of file <link linkend="__player_stats_8cpp_source">PlayerStats.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_class_p_stats_1a31ced6147321a6476baab209e9dd147c"/><section>
+    <title>showAll</title>
+<indexterm><primary>showAll</primary><secondary>PStats</secondary></indexterm>
+<indexterm><primary>PStats</primary><secondary>showAll</secondary></indexterm>
+<para><computeroutput>void showAll (const <link linkend="_class_p_stats">PStats</link> &amp; st)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>Friend function to display all statistics. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>st</entry><entry>
+<para><link linkend="_class_p_stats">PStats</link> to display </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__player_stats_8h">PlayerStats.h</link><link linkend="__player_stats_8cpp">PlayerStats.cpp</link></section>
+</section>

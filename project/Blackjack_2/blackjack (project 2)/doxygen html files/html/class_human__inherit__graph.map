@@ -1,0 +1,5 @@
+<map id="Human" name="Human">
+<area shape="rect" id="Node000001" title="Human player class Implements interactive player decisions." alt="" coords="15,421,102,533"/>
+<area shape="rect" id="Node000002" href="$class_player.html" title="Abstract base class for blackjack players Defines common functionality for managing hands,..." alt="" coords="5,5,112,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,388,62,422,56,422,56,388"/>
+</map>

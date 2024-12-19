@@ -1,0 +1,350 @@
+\doxysection{Card Class Reference}
+\hypertarget{class_card}{}\label{class_card}\index{Card@{Card}}
+
+
+Represents a single playing card in a standard deck This class implements a playing card with a value (1-\/13) and suit. It includes functionality for comparing cards, converting to string representations, and tracking the total number of cards created.  
+
+
+
+
+{\ttfamily \#include $<$Card.\+h$>$}
+
+
+
+Collaboration diagram for Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_card__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860}{Suit}} \{ \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860ad52d2d4c0b7218c48897d2e69e156ba4}{HEARTS}}
+, \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860a6ada586d0768a1f9c8d67e819f9c70af}{DIAMONDS}}
+, \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860ad85016c04fa090ced22a82729fac4307}{CLUBS}}
+, \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860a46a3bd9b0bb333d0b7521054dd6f8a06}{SPADES}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of card suits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_card_a783f5854cbe8c183ee3d4414c01472c0}{Card}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card_a9089c1bb6ba4f759dcca716e6ff42f54}{Card}} (int value, \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860}{Suit}} suit)
+\begin{DoxyCompactList}\small\item\em Constructor with value and suit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card_a38013f9863853a4de0d6e1d3be20ca03}{Card}} (const \mbox{\hyperlink{class_card}{Card}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card_a4e05b0b68e43e5e76c6194458cee874f}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_card_acc9b1b81d72e09c5a70036d0b91b4b30}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Get card\textquotesingle{}s numeric value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860}{Suit}} \mbox{\hyperlink{class_card_acfe58701c3583e9bc86ac2fe1e323516}{get\+Suit}} () const
+\begin{DoxyCompactList}\small\item\em Get card\textquotesingle{}s suit. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_card_a5e70c8ac94f7e7a95212e7ed00967da5}{get\+Suit\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get string representation of card\textquotesingle{}s suit. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_card_aec176a6f90ddf2bac50d3ade4382f0a2}{get\+Value\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get string representation of card\textquotesingle{}s value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_card_a72af3c8dc8c8d30901166e0bb36e0112}{operator==}} (const \mbox{\hyperlink{class_card}{Card}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_card_aff83c9c9c5b077e7f7cc6aa738feed25}{operator!=}} (const \mbox{\hyperlink{class_card}{Card}} \&other) const
+\begin{DoxyCompactList}\small\item\em Inequality comparison operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card}{Card}} \& \mbox{\hyperlink{class_card_ad2ec2f42129790f79948297c128fba9f}{operator=}} (const \mbox{\hyperlink{class_card}{Card}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_card_a3e30db73c71f875fb07ba04c59afb95e}{get\+Num\+Cards\+Created}} ()
+\begin{DoxyCompactList}\small\item\em Get total number of \doxylink{class_card}{Card} objects created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_card_a3bbd82d9047456c6ecbe51a56ca7a584}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_card}{Card}} \&card)
+\begin{DoxyCompactList}\small\item\em Stream output operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single playing card in a standard deck This class implements a playing card with a value (1-\/13) and suit. It includes functionality for comparing cards, converting to string representations, and tracking the total number of cards created. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_card_a5725a8e05afab8cd2f555bd81b069860}\index{Card@{Card}!Suit@{Suit}}
+\index{Suit@{Suit}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Suit}{Suit}}
+{\footnotesize\ttfamily \label{class_card_a5725a8e05afab8cd2f555bd81b069860} 
+enum class \mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860}{Card\+::\+Suit}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration of card suits. 
+
+Uses enum class for type safety and scoping \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HEARTS@{HEARTS}!Card@{Card}}\index{Card@{Card}!HEARTS@{HEARTS}}}\Hypertarget{class_card_a5725a8e05afab8cd2f555bd81b069860ad52d2d4c0b7218c48897d2e69e156ba4}\label{class_card_a5725a8e05afab8cd2f555bd81b069860} 
+HEARTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIAMONDS@{DIAMONDS}!Card@{Card}}\index{Card@{Card}!DIAMONDS@{DIAMONDS}}}\Hypertarget{class_card_a5725a8e05afab8cd2f555bd81b069860a6ada586d0768a1f9c8d67e819f9c70af}\label{class_card_a5725a8e05afab8cd2f555bd81b069860} 
+DIAMONDS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLUBS@{CLUBS}!Card@{Card}}\index{Card@{Card}!CLUBS@{CLUBS}}}\Hypertarget{class_card_a5725a8e05afab8cd2f555bd81b069860ad85016c04fa090ced22a82729fac4307}\label{class_card_a5725a8e05afab8cd2f555bd81b069860} 
+CLUBS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPADES@{SPADES}!Card@{Card}}\index{Card@{Card}!SPADES@{SPADES}}}\Hypertarget{class_card_a5725a8e05afab8cd2f555bd81b069860a46a3bd9b0bb333d0b7521054dd6f8a06}\label{class_card_a5725a8e05afab8cd2f555bd81b069860} 
+SPADES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_card_a783f5854cbe8c183ee3d4414c01472c0}\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_card_a783f5854cbe8c183ee3d4414c01472c0} 
+Card\+::\+Card (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Default constructor Creates Ace of Hearts by default. \Hypertarget{class_card_a9089c1bb6ba4f759dcca716e6ff42f54}\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_card_a9089c1bb6ba4f759dcca716e6ff42f54} 
+Card\+::\+Card (\begin{DoxyParamCaption}\item[{int}]{value}{, }\item[{\mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860}{Suit}}}]{suit}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with value and suit. 
+
+Parameterized constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \doxylink{class_card}{Card}\textquotesingle{}s numeric value (1-\/13) \\
+\hline
+{\em suit} & \doxylink{class_card}{Card}\textquotesingle{}s suit \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if value is outside valid range\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \doxylink{class_card}{Card} value (1-\/13) \\
+\hline
+{\em suit} & \doxylink{class_card}{Card} suit \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_card_a38013f9863853a4de0d6e1d3be20ca03}\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_card_a38013f9863853a4de0d6e1d3be20ca03} 
+Card\+::\+Card (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_card}{Card} to copy from \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_card_a4e05b0b68e43e5e76c6194458cee874f}\index{Card@{Card}!````~Card@{\texorpdfstring{$\sim$}{\string~}Card}}
+\index{````~Card@{\texorpdfstring{$\sim$}{\string~}Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Card()}{\string~Card()}}
+{\footnotesize\ttfamily \label{class_card_a4e05b0b68e43e5e76c6194458cee874f} 
+Card\+::\texorpdfstring{$\sim$}{\string~}\+Card (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Destructor Decrements card count. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_card_a3e30db73c71f875fb07ba04c59afb95e}\index{Card@{Card}!getNumCardsCreated@{getNumCardsCreated}}
+\index{getNumCardsCreated@{getNumCardsCreated}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getNumCardsCreated()}{getNumCardsCreated()}}
+{\footnotesize\ttfamily \label{class_card_a3e30db73c71f875fb07ba04c59afb95e} 
+int Card\+::get\+Num\+Cards\+Created (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get total number of \doxylink{class_card}{Card} objects created. 
+
+\begin{DoxyReturn}{Returns}
+int Number of cards created
+
+int Number of cards currently in existence 
+\end{DoxyReturn}
+\Hypertarget{class_card_acfe58701c3583e9bc86ac2fe1e323516}\index{Card@{Card}!getSuit@{getSuit}}
+\index{getSuit@{getSuit}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getSuit()}{getSuit()}}
+{\footnotesize\ttfamily \label{class_card_acfe58701c3583e9bc86ac2fe1e323516} 
+\mbox{\hyperlink{class_card_a5725a8e05afab8cd2f555bd81b069860}{Card\+::\+Suit}} Card\+::get\+Suit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get card\textquotesingle{}s suit. 
+
+\begin{DoxyReturn}{Returns}
+Suit Enumerated suit value 
+\end{DoxyReturn}
+\Hypertarget{class_card_a5e70c8ac94f7e7a95212e7ed00967da5}\index{Card@{Card}!getSuitString@{getSuitString}}
+\index{getSuitString@{getSuitString}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getSuitString()}{getSuitString()}}
+{\footnotesize\ttfamily \label{class_card_a5e70c8ac94f7e7a95212e7ed00967da5} 
+string Card\+::get\+Suit\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get string representation of card\textquotesingle{}s suit. 
+
+Get string representation of card suit.
+
+\begin{DoxyReturn}{Returns}
+std\+::string Suit name as string
+
+string Name of suit 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_card_a5e70c8ac94f7e7a95212e7ed00967da5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_card_acc9b1b81d72e09c5a70036d0b91b4b30}\index{Card@{Card}!getValue@{getValue}}
+\index{getValue@{getValue}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{class_card_acc9b1b81d72e09c5a70036d0b91b4b30} 
+int Card\+::get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get card\textquotesingle{}s numeric value. 
+
+\begin{DoxyReturn}{Returns}
+int Value between 1-\/13 
+\end{DoxyReturn}
+\Hypertarget{class_card_aec176a6f90ddf2bac50d3ade4382f0a2}\index{Card@{Card}!getValueString@{getValueString}}
+\index{getValueString@{getValueString}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getValueString()}{getValueString()}}
+{\footnotesize\ttfamily \label{class_card_aec176a6f90ddf2bac50d3ade4382f0a2} 
+string Card\+::get\+Value\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get string representation of card\textquotesingle{}s value. 
+
+Get string representation of card value.
+
+\begin{DoxyReturn}{Returns}
+std\+::string \doxylink{class_card}{Card} value as string (e.\+g., "{}\+Ace"{}, "{}\+King"{}, etc.)
+
+string \doxylink{class_card}{Card} value or face card name 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_card_aec176a6f90ddf2bac50d3ade4382f0a2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_card_aff83c9c9c5b077e7f7cc6aa738feed25}\index{Card@{Card}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{class_card_aff83c9c9c5b077e7f7cc6aa738feed25} 
+bool Card\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Inequality comparison operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_card}{Card} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if cards differ in value or suit 
+\end{DoxyReturn}
+\Hypertarget{class_card_ad2ec2f42129790f79948297c128fba9f}\index{Card@{Card}!operator=@{operator=}}
+\index{operator=@{operator=}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_card_ad2ec2f42129790f79948297c128fba9f} 
+\mbox{\hyperlink{class_card}{Card}} \& Card\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_card}{Card} to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_card}{Card}\& Reference to this card 
+\end{DoxyReturn}
+\Hypertarget{class_card_a72af3c8dc8c8d30901166e0bb36e0112}\index{Card@{Card}!operator==@{operator==}}
+\index{operator==@{operator==}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_card_a72af3c8dc8c8d30901166e0bb36e0112} 
+bool Card\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Equality comparison operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_card}{Card} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if cards have same value and suit
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_card}{Card} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if cards match in value and suit 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_card_a3bbd82d9047456c6ecbe51a56ca7a584}\index{Card@{Card}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_card_a3bbd82d9047456c6ecbe51a56ca7a584} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{class_card}{Card}} \&}]{card}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Stream output operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream \\
+\hline
+{\em card} & \doxylink{class_card}{Card} to output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& Reference to output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_card_8h}{Card.\+h}}\item 
+\mbox{\hyperlink{_card_8cpp}{Card.\+cpp}}\end{DoxyCompactItemize}

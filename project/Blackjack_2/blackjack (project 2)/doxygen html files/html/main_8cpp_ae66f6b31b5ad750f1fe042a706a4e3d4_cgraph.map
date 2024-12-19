@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main program entry point." alt="" coords="5,31,55,57"/>
+<area shape="rect" id="Node000002" href="$class_game.html#a9b5d5cc069f5d6f874d8be75ae319d1d" title="Get the single instance of the Game class." alt="" coords="107,5,189,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,36,91,28,92,33,56,41"/>
+<area shape="rect" id="Node000003" href="$class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90" title="Starts a new game session." alt="" coords="103,56,193,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,47,88,54,87,59,55,52"/>
+</map>

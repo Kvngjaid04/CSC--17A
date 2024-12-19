@@ -1,0 +1,286 @@
+\doxysection{Deck\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_deck}{}\label{class_deck}\index{Deck$<$ T $>$@{Deck$<$ T $>$}}
+
+
+Template class representing a deck of cards.  
+
+
+
+
+{\ttfamily \#include $<$Deck.\+h$>$}
+
+
+
+Collaboration diagram for Deck\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_deck__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}{Deck}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes a single deck. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deck_a5684451039c5e904d78b6d4b41d55f5d}{Deck}} (int num\+Decks)
+\begin{DoxyCompactList}\small\item\em Constructor for multiple decks. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deck_abb77cc39bbcab549f48a922e77019725}{Deck}} (const \mbox{\hyperlink{class_deck}{Deck}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deck}{Deck}} \& \mbox{\hyperlink{class_deck_a94f54672e990b364ccb0f7024d960234}{operator=}} (const \mbox{\hyperlink{class_deck}{Deck}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deck_ab3294d971f9ecf25fd92d982aa2efad9}{\texorpdfstring{$\sim$}{\string~}\+Deck}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deck_a64897016baf6e1c48f632dcc807096e7}{shuffle}} ()
+\begin{DoxyCompactList}\small\item\em Shuffle the deck. Randomizes card order and clears dealt cards tracking. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_deck_a08384299dc4e9ebdf3d10db7ef118753}{draw\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Draw a card from the deck. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if deck is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4}{remaining\+Cards}} () const
+\begin{DoxyCompactList}\small\item\em Get number of remaining cards. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\begin{DoxyCompactList}\small\item\em Array subscript operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_deck_a7cfbcff938d01fc5580a613003767981}{initialize\+Deck}} (int num\+Decks)
+\begin{DoxyCompactList}\small\item\em Initialize deck(s) with cards. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\class \mbox{\hyperlink{class_deck_ab94da4fd43709744115e172ef2ee4223}{Deck\+Logger}}
+\begin{DoxyCompactList}\small\item\em Friend class for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = Card$>$\newline
+class Deck$<$ T $>$}
+Template class representing a deck of cards. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \doxylink{class_card}{Card} type that comprises the deck (defaults to \doxylink{class_card}{Card} class) Implements a deck of cards with shuffle, draw and tracking functionality. Supports multiple deck initialization and duplicate card detection. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\mbox{\hyperlink{class_deck}{\+::\+Deck}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. Initializes a single deck. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_deck_a5684451039c5e904d78b6d4b41d55f5d}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_deck_a5684451039c5e904d78b6d4b41d55f5d} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\mbox{\hyperlink{class_deck}{\+::\+Deck}} (\begin{DoxyParamCaption}\item[{int}]{num\+Decks}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for multiple decks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Decks} & Number of decks to initialize \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_deck_a5684451039c5e904d78b6d4b41d55f5d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_deck_abb77cc39bbcab549f48a922e77019725}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_deck_abb77cc39bbcab549f48a922e77019725} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\mbox{\hyperlink{class_deck}{\+::\+Deck}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_deck}{Deck} to copy from \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_deck_ab3294d971f9ecf25fd92d982aa2efad9}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!````~Deck@{\texorpdfstring{$\sim$}{\string~}Deck}}
+\index{````~Deck@{\texorpdfstring{$\sim$}{\string~}Deck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Deck()}{\string~Deck()}}
+{\footnotesize\ttfamily \label{class_deck_ab3294d971f9ecf25fd92d982aa2efad9} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_deck}{Deck}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_deck_a08384299dc4e9ebdf3d10db7ef118753}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!drawCard@{drawCard}}
+\index{drawCard@{drawCard}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{drawCard()}{drawCard()}}
+{\footnotesize\ttfamily \label{class_deck_a08384299dc4e9ebdf3d10db7ef118753} 
+template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::draw\+Card (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draw a card from the deck. 
+
+\begin{DoxyReturn}{Returns}
+T The drawn card 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if deck is empty \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Automatically reinitializes deck if duplicate card detected 
+\end{DoxyNote}
+\Hypertarget{class_deck_a7cfbcff938d01fc5580a613003767981}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!initializeDeck@{initializeDeck}}
+\index{initializeDeck@{initializeDeck}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{initializeDeck()}{initializeDeck()}}
+{\footnotesize\ttfamily \label{class_deck_a7cfbcff938d01fc5580a613003767981} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::initialize\+Deck (\begin{DoxyParamCaption}\item[{int}]{num\+Decks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize deck(s) with cards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Decks} & Number of decks to initialize \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_deck_a7cfbcff938d01fc5580a613003767981_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if deck is empty. 
+
+\begin{DoxyReturn}{Returns}
+bool True if no cards remain 
+\end{DoxyReturn}
+\Hypertarget{class_deck_a94f54672e990b364ccb0f7024d960234}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_deck_a94f54672e990b364ccb0f7024d960234} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$ \& \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_deck}{Deck} to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_deck}{Deck}\& Reference to this deck 
+\end{DoxyReturn}
+\Hypertarget{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe} 
+template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption}) const}
+
+
+
+Array subscript operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of card to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \doxylink{class_card}{Card} at specified index 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em out\+\_\+of\+\_\+range} & if index is invalid \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!remainingCards@{remainingCards}}
+\index{remainingCards@{remainingCards}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remainingCards()}{remainingCards()}}
+{\footnotesize\ttfamily \label{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4} 
+template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::remaining\+Cards (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get number of remaining cards. 
+
+\begin{DoxyReturn}{Returns}
+int Number of undealt cards 
+\end{DoxyReturn}
+\Hypertarget{class_deck_a64897016baf6e1c48f632dcc807096e7}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily \label{class_deck_a64897016baf6e1c48f632dcc807096e7} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_deck}{Deck}}$<$ T $>$\+::shuffle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Shuffle the deck. Randomizes card order and clears dealt cards tracking. 
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_deck_ab94da4fd43709744115e172ef2ee4223}\index{Deck$<$ T $>$@{Deck$<$ T $>$}!DeckLogger@{DeckLogger}}
+\index{DeckLogger@{DeckLogger}!Deck$<$ T $>$@{Deck$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeckLogger}{DeckLogger}}
+{\footnotesize\ttfamily \label{class_deck_ab94da4fd43709744115e172ef2ee4223} 
+template$<$typename T  = Card$>$ \\
+template$<$typename U $>$ \\
+friend class Deck\+Logger\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Friend class for debugging purposes. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_deck_8h}{Deck.\+h}}\end{DoxyCompactItemize}

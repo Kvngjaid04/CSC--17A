@@ -1,0 +1,5 @@
+<map id="Player::getName" name="Player::getName">
+<area shape="rect" id="Node000001" title="Get player&#39;s name." alt="" coords="180,5,299,32"/>
+<area shape="rect" id="Node000002" href="$class_human.html#a41589a8a97907c66a633f2aecab9c440" title="Display human player&#39;s hand." alt="" coords="5,5,132,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,21,132,21,132,16,164,16"/>
+</map>

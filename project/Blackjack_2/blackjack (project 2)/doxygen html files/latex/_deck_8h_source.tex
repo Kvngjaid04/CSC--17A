@@ -1,0 +1,150 @@
+\doxysection{Deck.\+h}
+\hypertarget{_deck_8h_source}{}\label{_deck_8h_source}\mbox{\hyperlink{_deck_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DECK\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DECK\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_card_8h}{Card.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T\ =\ Card>}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_deck}{Deck}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}{Deck}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_deck_a5684451039c5e904d78b6d4b41d55f5d}{Deck}}(\textcolor{keywordtype}{int}\ numDecks);}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_deck_abb77cc39bbcab549f48a922e77019725}{Deck}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_deck}{Deck}}\&\ other);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_deck}{Deck}}\&\ \mbox{\hyperlink{class_deck_a94f54672e990b364ccb0f7024d960234}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_deck}{Deck}}\&\ other);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_deck_ab3294d971f9ecf25fd92d982aa2efad9}{\string~Deck}}();}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deck_a64897016baf6e1c48f632dcc807096e7}{shuffle}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ T\ \mbox{\hyperlink{class_deck_a08384299dc4e9ebdf3d10db7ef118753}{drawCard}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4}{remainingCards}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ T\ \mbox{\hyperlink{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe}{operator[]}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_deck_ab94da4fd43709744115e172ef2ee4223}{DeckLogger}};}
+\DoxyCodeLine{00090\ \ \ \ \ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deck_a7cfbcff938d01fc5580a613003767981}{initializeDeck}}(\textcolor{keywordtype}{int}\ numDecks);}
+\DoxyCodeLine{00097\ \ \ \ \ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00099\ \ \ \ \ vector<T>\ cards;\ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ vector<T>\ dealtCards;\ }
+\DoxyCodeLine{00101\ \ \ \ \ random\_device\ rd;\ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ mt19937\ gen;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ Template\ implementation}}
+\DoxyCodeLine{00106\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00107\ \mbox{\hyperlink{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}{Deck<T>::Deck}}()\ :\ gen(rd())\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{class_deck_a7cfbcff938d01fc5580a613003767981}{initializeDeck}}(1);\ \ \textcolor{comment}{//\ Default\ to\ one\ deck}}
+\DoxyCodeLine{00109\ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00112\ \mbox{\hyperlink{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}{Deck<T>::Deck}}(\textcolor{keywordtype}{int}\ numDecks)\ :\ gen(rd())\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_deck_a7cfbcff938d01fc5580a613003767981}{initializeDeck}}(numDecks);}
+\DoxyCodeLine{00114\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deck_a7cfbcff938d01fc5580a613003767981}{Deck<T>::initializeDeck}}(\textcolor{keywordtype}{int}\ numDecks)\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ cards.clear();}
+\DoxyCodeLine{00119\ \ \ \ \ dealtCards.clear();\ \ \textcolor{comment}{//\ Clear\ dealt\ cards\ when\ reinitializing}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ deck\ =\ 0;\ deck\ <\ numDecks;\ ++deck)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ suit\ =\ 0;\ suit\ <\ 4;\ ++suit)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ value\ =\ 1;\ value\ <=\ 13;\ ++value)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cards.push\_back(T(value,\ \textcolor{keyword}{static\_cast<}typename\ T::Suit\textcolor{keyword}{>}(suit)));}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deck_a64897016baf6e1c48f632dcc807096e7}{Deck<T>::shuffle}}()\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ std::random\_shuffle(cards.begin(),\ cards.end());\ \ \textcolor{comment}{//\ Changed\ to\ random\_shuffle}}
+\DoxyCodeLine{00132\ \ \ \ \ dealtCards.clear();\ \ \textcolor{comment}{//\ Clear\ dealt\ cards\ tracking\ when\ shuffling}}
+\DoxyCodeLine{00133\ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00136\ T\ \mbox{\hyperlink{class_deck_a08384299dc4e9ebdf3d10db7ef118753}{Deck<T>::drawCard}}()\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{if}\ (isEmpty())\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Deck\ is\ empty!"{}}\ <<\ endl;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ T();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \ \ T\ card\ =\ cards.back();}
+\DoxyCodeLine{00143\ \ \ \ \ cards.pop\_back();}
+\DoxyCodeLine{00144\ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ Check\ for\ duplicates}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ dealtCard\ :\ dealtCards)\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (card\ ==\ dealtCard)\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reinitialize\ deck\ if\ duplicate\ found}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ initializeDeck(6);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ shuffle();}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ drawCard();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ }
+\DoxyCodeLine{00155\ \ \ \ \ dealtCards.push\_back(card);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{return}\ card;}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_deck_a2b221bd7933edfaeb7c9ede9030f29dc}{Deck<T>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{return}\ cards.empty();}
+\DoxyCodeLine{00162\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_deck_ae5b40fb689e6ad018b541e8c6a78b4c4}{Deck<T>::remainingCards}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{return}\ cards.size();}
+\DoxyCodeLine{00167\ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00170\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00171\ \mbox{\hyperlink{class_deck_a7cb6b63b067cdaf3de1baeb5534d7271}{Deck<T>::Deck}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_deck}{Deck}}\&\ other)\ :\ gen(rd())\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ cards\ =\ other.cards;}
+\DoxyCodeLine{00173\ \ \ \ \ dealtCards\ =\ other.dealtCards;}
+\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{comment}{//\ Assignment\ operator}}
+\DoxyCodeLine{00177\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00178\ \mbox{\hyperlink{class_deck}{Deck<T>}}\&\ \mbox{\hyperlink{class_deck_a94f54672e990b364ccb0f7024d960234}{Deck<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_deck}{Deck}}\&\ other)\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ cards\ =\ other.cards;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ dealtCards\ =\ other.dealtCards;}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00184\ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00187\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00188\ \mbox{\hyperlink{class_deck_ab3294d971f9ecf25fd92d982aa2efad9}{Deck<T>::\string~Deck}}()\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ cards.clear();}
+\DoxyCodeLine{00190\ \ \ \ \ dealtCards.clear();}
+\DoxyCodeLine{00191\ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{comment}{//\ Subscript\ operator}}
+\DoxyCodeLine{00194\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00195\ T\ \mbox{\hyperlink{class_deck_a05ea3a7fa0b033dc9d7b984c7a51effe}{Deck<T>::operator[]}}(\textcolor{keywordtype}{int}\ index)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ cards.size())\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ out\_of\_range(\textcolor{stringliteral}{"{}Index\ is\ out\ of\ range"{}});}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{return}\ cards[index];}
+\DoxyCodeLine{00200\ \}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DECK\_H}}
+
+\end{DoxyCode}

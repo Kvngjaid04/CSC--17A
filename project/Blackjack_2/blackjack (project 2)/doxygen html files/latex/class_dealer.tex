@@ -1,0 +1,177 @@
+\doxysection{Dealer Class Reference}
+\hypertarget{class_dealer}{}\label{class_dealer}\index{Dealer@{Dealer}}
+
+
+\doxylink{class_dealer}{Dealer} class Implements dealer-\/specific logic and display.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for Dealer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_dealer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dealer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_dealer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dealer_a518fd02cf57eaf55e06b7754c4649a3f}{Dealer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dealer_a832662f2a7de35cdb6c3c68259056278}{want\+Hit}} () override
+\begin{DoxyCompactList}\small\item\em Get dealer\textquotesingle{}s hit decision based on rules. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dealer_aa4a7ca18077f341fe8dfbc3e641de6f6}{disp\+Hand}} () const override
+\begin{DoxyCompactList}\small\item\em Display dealer\textquotesingle{}s initial hand (one card hidden) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dealer_a6b2d9774b8d0cff1595f38c6f891bf77}{show\+All}} () const
+\begin{DoxyCompactList}\small\item\em Display all cards in dealer\textquotesingle{}s hand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_af6dcaf3d84b3666f854ec7b48392925e}{Player}} (const string \&\mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}}, int \mbox{\hyperlink{class_player_a38a3243cd8b99085446d1b235cce825c}{funds}}=1000)
+\begin{DoxyCompactList}\small\item\em Constructor with name and initial funds. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_player_ad5ff3d1b054718c9e69da62dea18ab01}{add\+Card}} (const \mbox{\hyperlink{class_card}{Card}} \&card)
+\begin{DoxyCompactList}\small\item\em Add card to player\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_player_a26f1447acb4414e57c534cd3b29c47ac}{get\+Val}} () const
+\begin{DoxyCompactList}\small\item\em Calculate hand value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_player_ac87d002aca38e7e814d5bf6e97c432e1}{is\+Bust}} () const
+\begin{DoxyCompactList}\small\item\em Check if hand value exceeds 21. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_player_af1dda5581f5f56c61bac0cf07a300bdd}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear player\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a7bd5bdcf24baf66b2f95947acb478128}{set\+Bet}} (int amt)
+\begin{DoxyCompactList}\small\item\em Set bet amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_afb68622bbe0d61b7e9c54d21217e0405}{add\+Win}} (int amt)
+\begin{DoxyCompactList}\small\item\em Add winnings to funds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a7db9632e9164847ec9df66ed95efa60d}{lose\+Bet}} (int amt)
+\begin{DoxyCompactList}\small\item\em Deduct lost bet from funds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aba58b095f7f82dfdc4df8a167df2695d}{set\+Fund}} (int amt)
+\begin{DoxyCompactList}\small\item\em Set player\textquotesingle{}s funds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a40c5014c6f8ac87b8707c8c611987e9f}{add\+Game}} (bool won, int amt)
+\begin{DoxyCompactList}\small\item\em Record game result in stats. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a2d8034eb9889b2fbd6ca2e1e9de0d1f4}{get\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em Get win rate from stats. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_stats}{PStats}} \& \mbox{\hyperlink{class_player_a68feb8bbe38a311b9f538e7e05e0510c}{get\+Stat}} ()
+\begin{DoxyCompactList}\small\item\em Get player statistics. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_player_a4939193fc637f75bf7a11118334dae7e}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_ae0ccc5586972501fcab0f969cab3bf95}{get\+Fund}} () const
+\begin{DoxyCompactList}\small\item\em Get current funds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_af72bd8540101dd0f76c4a00c6b3a7982}{get\+Bet}} () const
+\begin{DoxyCompactList}\small\item\em Get current bet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a9cb83df3e8030640711108c5c4ffab4f}{operator==}} (const \mbox{\hyperlink{class_player}{Player}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality comparison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a56ac1b030897173395f18c99f522827b}{operator!=}} (const \mbox{\hyperlink{class_player}{Player}} \&other) const
+\begin{DoxyCompactList}\small\item\em Inequality comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_acf0355128a99ee20ad9931b760fb2de1}{name}}
+\item 
+vector$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_a120127b3026b271cb7b1a5b82d635503}{hand}}
+\item 
+int \mbox{\hyperlink{class_player_a38a3243cd8b99085446d1b235cce825c}{funds}}
+\item 
+int \mbox{\hyperlink{class_player_a9ad8e498594182ced9e8091de332f6d0}{bet}}
+\item 
+\mbox{\hyperlink{class_p_stats}{PStats}} \mbox{\hyperlink{class_player_a4d0371e1f41da5ef5cd8a5a761fe5886}{stats}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_dealer}{Dealer} class Implements dealer-\/specific logic and display. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dealer_a518fd02cf57eaf55e06b7754c4649a3f}\index{Dealer@{Dealer}!Dealer@{Dealer}}
+\index{Dealer@{Dealer}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{Dealer()}{Dealer()}}
+{\footnotesize\ttfamily \label{class_dealer_a518fd02cf57eaf55e06b7754c4649a3f} 
+Dealer\+::\+Dealer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\doxylink{class_dealer}{Dealer} constructor Initializes dealer with default values.
+
+\doxylink{class_dealer}{Dealer} Class Implementation 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dealer_aa4a7ca18077f341fe8dfbc3e641de6f6}\index{Dealer@{Dealer}!dispHand@{dispHand}}
+\index{dispHand@{dispHand}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{dispHand()}{dispHand()}}
+{\footnotesize\ttfamily \label{class_dealer_aa4a7ca18077f341fe8dfbc3e641de6f6} 
+void Dealer\+::disp\+Hand (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Display dealer\textquotesingle{}s initial hand (one card hidden) 
+
+
+
+Implements \mbox{\hyperlink{class_player_a9e88f13cf784a6f938256b77a69bcc65}{Player}}.
+
+\Hypertarget{class_dealer_a6b2d9774b8d0cff1595f38c6f891bf77}\index{Dealer@{Dealer}!showAll@{showAll}}
+\index{showAll@{showAll}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{showAll()}{showAll()}}
+{\footnotesize\ttfamily \label{class_dealer_a6b2d9774b8d0cff1595f38c6f891bf77} 
+void Dealer\+::show\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Display all cards in dealer\textquotesingle{}s hand. 
+
+Display dealer\textquotesingle{}s complete hand Shows all cards and total value. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{class_dealer_a6b2d9774b8d0cff1595f38c6f891bf77_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_dealer_a832662f2a7de35cdb6c3c68259056278}\index{Dealer@{Dealer}!wantHit@{wantHit}}
+\index{wantHit@{wantHit}!Dealer@{Dealer}}
+\doxysubsubsection{\texorpdfstring{wantHit()}{wantHit()}}
+{\footnotesize\ttfamily \label{class_dealer_a832662f2a7de35cdb6c3c68259056278} 
+bool Dealer\+::want\+Hit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get dealer\textquotesingle{}s hit decision based on rules. 
+
+\begin{DoxyReturn}{Returns}
+bool True if dealer must hit (\texorpdfstring{$<$}{<} 17) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_player_a395de65d83d94f6298af5b5dabaf9731}{Player}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_dealer_a832662f2a7de35cdb6c3c68259056278_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

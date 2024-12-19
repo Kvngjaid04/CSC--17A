@@ -1,0 +1,5 @@
+<map id="PStats::add" name="PStats::add">
+<area shape="rect" id="Node000001" title="Add game result." alt="" coords="176,5,266,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a40c5014c6f8ac87b8707c8c611987e9f" title="Record game result in stats." alt="" coords="5,5,128,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,21,128,21,128,16,160,16"/>
+</map>

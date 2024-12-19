@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__save_game_8h_source" xml:lang="en-US">
+<title>SaveGame.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__save_game_8h_source_1l00001"/>00001 
+<anchor xml:id="__save_game_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;SAVEGAME_H</emphasis>
+<anchor xml:id="__save_game_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;SAVEGAME_H</emphasis>
+<anchor xml:id="__save_game_8h_source_1l00010"/>00010 
+<anchor xml:id="__save_game_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__save_game_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+<anchor xml:id="__save_game_8h_source_1l00013"/>00013 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__save_game_8h_source_1l00014"/>00014 
+<anchor xml:id="__save_game_8h_source_1l00019"/><link linkend="_struct_save">00019</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_save">Save</link>&#32;{
+<anchor xml:id="__save_game_8h_source_1l00020"/><link linkend="_struct_save_1a87d4df2d25c8c7845cc8e2b31c3cf8c6">00020</link> &#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_save_1a87d4df2d25c8c7845cc8e2b31c3cf8c6">name</link>[30];&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00021"/><link linkend="_struct_save_1a59f394a05cbf44ae85e90576e6cb34e2">00021</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_save_1a59f394a05cbf44ae85e90576e6cb34e2">funds</link>;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00022"/><link linkend="_struct_save_1a6645464a8d38439095ec57b31ed264cb">00022</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_save_1a6645464a8d38439095ec57b31ed264cb">wins</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00023"/><link linkend="_struct_save_1a590de8d98933b1fa1181b5df23fdf80c">00023</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_save_1a590de8d98933b1fa1181b5df23fdf80c">games</link>;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00024"/><link linkend="_struct_save_1a66849c66e30e65542ac629864d9b3da9">00024</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_save_1a66849c66e30e65542ac629864d9b3da9">gmsAll</link>;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00025"/><link linkend="_struct_save_1a97a5d9075e6b9d2e4887d08a9815144d">00025</link> &#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_save_1a97a5d9075e6b9d2e4887d08a9815144d">winsAll</link>;&#32;&#32;&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00026"/>00026 };
+<anchor xml:id="__save_game_8h_source_1l00027"/>00027 
+<anchor xml:id="__save_game_8h_source_1l00032"/><link linkend="_class_save_game">00032</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_save_game">SaveGame</link>&#32;{
+<anchor xml:id="__save_game_8h_source_1l00033"/>00033 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__save_game_8h_source_1l00040"/>00040 &#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_save_game_1aee1d61f41270f9256f47a858e00db05a">load</link>(<link linkend="_struct_save">Save</link>&amp;&#32;data,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&amp;&#32;user);
+<anchor xml:id="__save_game_8h_source_1l00041"/>00041 
+<anchor xml:id="__save_game_8h_source_1l00048"/>00048 &#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_save_game_1a4657b0a4750db6c1ba1a8f4033a46372">save</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_save">Save</link>&amp;&#32;data,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&amp;&#32;user);
+<anchor xml:id="__save_game_8h_source_1l00049"/>00049 
+<anchor xml:id="__save_game_8h_source_1l00055"/>00055 &#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_save_game_1abf8a728e1a1a764a838a1456f0c35ef5">valid</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&amp;&#32;user);
+<anchor xml:id="__save_game_8h_source_1l00056"/>00056 &#32;&#32;&#32;
+<anchor xml:id="__save_game_8h_source_1l00057"/>00057 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__save_game_8h_source_1l00063"/>00063 &#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;fname(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&amp;&#32;user);
+<anchor xml:id="__save_game_8h_source_1l00064"/>00064 };
+<anchor xml:id="__save_game_8h_source_1l00065"/>00065 
+<anchor xml:id="__save_game_8h_source_1l00066"/>00066 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

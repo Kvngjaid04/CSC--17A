@@ -1,0 +1,133 @@
+\doxysection{Save\+Game Class Reference}
+\hypertarget{class_save_game}{}\label{class_save_game}\index{SaveGame@{SaveGame}}
+
+
+Static class for managing game state persistence.  
+
+
+
+
+{\ttfamily \#include $<$Save\+Game.\+h$>$}
+
+
+
+Collaboration diagram for Save\+Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{class_save_game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_save_game_aee1d61f41270f9256f47a858e00db05a}{load}} (\mbox{\hyperlink{struct_save}{Save}} \&data, const string \&user)
+\begin{DoxyCompactList}\small\item\em Load saved game data. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_save_game_a4657b0a4750db6c1ba1a8f4033a46372}{save}} (const \mbox{\hyperlink{struct_save}{Save}} \&data, const string \&user)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_save}{Save} current game data. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_save_game_abf8a728e1a1a764a838a1456f0c35ef5}{valid}} (const string \&user)
+\begin{DoxyCompactList}\small\item\em Check if save data exists for user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static class for managing game state persistence. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_save_game_aee1d61f41270f9256f47a858e00db05a}\index{SaveGame@{SaveGame}!load@{load}}
+\index{load@{load}!SaveGame@{SaveGame}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{class_save_game_aee1d61f41270f9256f47a858e00db05a} 
+bool Save\+Game\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_save}{Save}} \&}]{data}{, }\item[{const string \&}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load saved game data. 
+
+Load saved game data for user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \doxylink{struct_save}{Save} structure to load into \\
+\hline
+{\em user} & Username to load data for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if load successful
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \doxylink{struct_save}{Save} structure to load data into \\
+\hline
+{\em user} & Username to load data for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if load successful 
+\end{DoxyReturn}
+\Hypertarget{class_save_game_a4657b0a4750db6c1ba1a8f4033a46372}\index{SaveGame@{SaveGame}!save@{save}}
+\index{save@{save}!SaveGame@{SaveGame}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_save_game_a4657b0a4750db6c1ba1a8f4033a46372} 
+bool Save\+Game\+::save (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_save}{Save}} \&}]{data}{, }\item[{const string \&}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxylink{struct_save}{Save} current game data. 
+
+\doxylink{struct_save}{Save} current game state for user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \doxylink{struct_save}{Save} structure containing data to save \\
+\hline
+{\em user} & Username to save data for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if save successful
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \doxylink{struct_save}{Save} structure containing data \\
+\hline
+{\em user} & Username to save data for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if save successful 
+\end{DoxyReturn}
+\Hypertarget{class_save_game_abf8a728e1a1a764a838a1456f0c35ef5}\index{SaveGame@{SaveGame}!valid@{valid}}
+\index{valid@{valid}!SaveGame@{SaveGame}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily \label{class_save_game_abf8a728e1a1a764a838a1456f0c35ef5} 
+bool Save\+Game\+::valid (\begin{DoxyParamCaption}\item[{const string \&}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if save data exists for user. 
+
+Validate username format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Username to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if save data exists
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Username to validate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if username is valid
+\end{DoxyReturn}
+Username must be 3-\/30 characters, alphanumeric or underscore 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_save_game_8h}{Save\+Game.\+h}}\item 
+\mbox{\hyperlink{_save_game_8cpp}{Save\+Game.\+cpp}}\end{DoxyCompactItemize}

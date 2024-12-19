@@ -1,0 +1,5 @@
+<map id="Player" name="Player">
+<area shape="rect" id="Node000001" title="Abstract base class for blackjack players Defines common functionality for managing hands,..." alt="" coords="5,331,112,677"/>
+<area shape="rect" id="Node000002" href="$class_p_stats.html" title="Player statistics manager Tracks game results and calculates statistics." alt="" coords="15,5,102,267"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,267,62,314,56,314,56,267"/>
+</map>

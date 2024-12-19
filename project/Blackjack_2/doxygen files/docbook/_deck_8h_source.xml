@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__deck_8h_source" xml:lang="en-US">
+<title>Deck.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__deck_8h_source_1l00001"/>00001 
+<anchor xml:id="__deck_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;DECK_H</emphasis>
+<anchor xml:id="__deck_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;DECK_H</emphasis>
+<anchor xml:id="__deck_8h_source_1l00010"/>00010 
+<anchor xml:id="__deck_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__deck_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
+<anchor xml:id="__deck_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;random&gt;</emphasis>
+<anchor xml:id="__deck_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;stdexcept&gt;</emphasis>
+<anchor xml:id="__deck_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__card_8h">Card.h</link>&quot;</emphasis>
+<anchor xml:id="__deck_8h_source_1l00016"/>00016 
+<anchor xml:id="__deck_8h_source_1l00017"/>00017 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__deck_8h_source_1l00018"/>00018 
+<anchor xml:id="__deck_8h_source_1l00026"/>00026 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&#32;=&#32;Card&gt;
+<anchor xml:id="__deck_8h_source_1l00027"/><link linkend="_class_deck">00027</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_deck">Deck</link>&#32;{
+<anchor xml:id="__deck_8h_source_1l00028"/>00028 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__deck_8h_source_1l00030"/><link linkend="_class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271">00030</link> &#32;&#32;&#32;&#32;<link linkend="_class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271">Deck</link>();
+<anchor xml:id="__deck_8h_source_1l00031"/>00031 
+<anchor xml:id="__deck_8h_source_1l00036"/><link linkend="_class_deck_1a5684451039c5e904d78b6d4b41d55f5d">00036</link> &#32;&#32;&#32;&#32;<link linkend="_class_deck_1a5684451039c5e904d78b6d4b41d55f5d">Deck</link>(<emphasis role="keywordtype">int</emphasis>&#32;numDecks);
+<anchor xml:id="__deck_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00042"/><link linkend="_class_deck_1abb77cc39bbcab549f48a922e77019725">00042</link> &#32;&#32;&#32;&#32;<link linkend="_class_deck_1abb77cc39bbcab549f48a922e77019725">Deck</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_deck">Deck</link>&amp;&#32;other);
+<anchor xml:id="__deck_8h_source_1l00043"/>00043 
+<anchor xml:id="__deck_8h_source_1l00049"/><link linkend="_class_deck_1a94f54672e990b364ccb0f7024d960234">00049</link> &#32;&#32;&#32;&#32;<link linkend="_class_deck">Deck</link>&amp;&#32;<link linkend="_class_deck_1a94f54672e990b364ccb0f7024d960234">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_deck">Deck</link>&amp;&#32;other);
+<anchor xml:id="__deck_8h_source_1l00050"/>00050 
+<anchor xml:id="__deck_8h_source_1l00052"/><link linkend="_class_deck_1ab3294d971f9ecf25fd92d982aa2efad9">00052</link> &#32;&#32;&#32;&#32;<link linkend="_class_deck_1ab3294d971f9ecf25fd92d982aa2efad9">~Deck</link>();
+<anchor xml:id="__deck_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00057"/><link linkend="_class_deck_1a64897016baf6e1c48f632dcc807096e7">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_deck_1a64897016baf6e1c48f632dcc807096e7">shuffle</link>();
+<anchor xml:id="__deck_8h_source_1l00058"/>00058 
+<anchor xml:id="__deck_8h_source_1l00065"/><link linkend="_class_deck_1a08384299dc4e9ebdf3d10db7ef118753">00065</link> &#32;&#32;&#32;&#32;T&#32;<link linkend="_class_deck_1a08384299dc4e9ebdf3d10db7ef118753">drawCard</link>();
+<anchor xml:id="__deck_8h_source_1l00066"/>00066 
+<anchor xml:id="__deck_8h_source_1l00071"/><link linkend="_class_deck_1a2b221bd7933edfaeb7c9ede9030f29dc">00071</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_deck_1a2b221bd7933edfaeb7c9ede9030f29dc">isEmpty</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__deck_8h_source_1l00072"/>00072 
+<anchor xml:id="__deck_8h_source_1l00077"/><link linkend="_class_deck_1ae5b40fb689e6ad018b541e8c6a78b4c4">00077</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_deck_1ae5b40fb689e6ad018b541e8c6a78b4c4">remainingCards</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__deck_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00085"/><link linkend="_class_deck_1a05ea3a7fa0b033dc9d7b984c7a51effe">00085</link> &#32;&#32;&#32;&#32;T&#32;<link linkend="_class_deck_1a05ea3a7fa0b033dc9d7b984c7a51effe">operator[]</link>(<emphasis role="keywordtype">int</emphasis>&#32;index)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="__deck_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;U&gt;
+<anchor xml:id="__deck_8h_source_1l00089"/><link linkend="_class_deck_1ab94da4fd43709744115e172ef2ee4223">00089</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_deck_1ab94da4fd43709744115e172ef2ee4223">DeckLogger</link>;
+<anchor xml:id="__deck_8h_source_1l00090"/>00090 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00091"/>00091 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="__deck_8h_source_1l00096"/><link linkend="_class_deck_1a7cfbcff938d01fc5580a613003767981">00096</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_deck_1a7cfbcff938d01fc5580a613003767981">initializeDeck</link>(<emphasis role="keywordtype">int</emphasis>&#32;numDecks);
+<anchor xml:id="__deck_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00098"/>00098 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__deck_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;vector&lt;T&gt;&#32;cards;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;vector&lt;T&gt;&#32;dealtCards;&#32;
+<anchor xml:id="__deck_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;random_device&#32;rd;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;mt19937&#32;gen;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00103"/>00103 };
+<anchor xml:id="__deck_8h_source_1l00104"/>00104 
+<anchor xml:id="__deck_8h_source_1l00105"/>00105 <emphasis role="comment">//&#32;Template&#32;implementation</emphasis>
+<anchor xml:id="__deck_8h_source_1l00106"/>00106 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00107"/><link linkend="_class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271">00107</link> <link linkend="_class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271">Deck&lt;T&gt;::Deck</link>()&#32;:&#32;gen(rd())&#32;{
+<anchor xml:id="__deck_8h_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<link linkend="_class_deck_1a7cfbcff938d01fc5580a613003767981">initializeDeck</link>(1);&#32;&#32;<emphasis role="comment">//&#32;Default&#32;to&#32;one&#32;deck</emphasis>
+<anchor xml:id="__deck_8h_source_1l00109"/>00109 }
+<anchor xml:id="__deck_8h_source_1l00110"/>00110 
+<anchor xml:id="__deck_8h_source_1l00111"/>00111 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00112"/><link linkend="_class_deck_1a5684451039c5e904d78b6d4b41d55f5d">00112</link> <link linkend="_class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271">Deck&lt;T&gt;::Deck</link>(<emphasis role="keywordtype">int</emphasis>&#32;numDecks)&#32;:&#32;gen(rd())&#32;{
+<anchor xml:id="__deck_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<link linkend="_class_deck_1a7cfbcff938d01fc5580a613003767981">initializeDeck</link>(numDecks);
+<anchor xml:id="__deck_8h_source_1l00114"/>00114 }
+<anchor xml:id="__deck_8h_source_1l00115"/>00115 
+<anchor xml:id="__deck_8h_source_1l00116"/>00116 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00117"/><link linkend="_class_deck_1a7cfbcff938d01fc5580a613003767981">00117</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_deck_1a7cfbcff938d01fc5580a613003767981">Deck&lt;T&gt;::initializeDeck</link>(<emphasis role="keywordtype">int</emphasis>&#32;numDecks)&#32;{
+<anchor xml:id="__deck_8h_source_1l00118"/>00118 &#32;&#32;&#32;&#32;cards.clear();
+<anchor xml:id="__deck_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;dealtCards.clear();&#32;&#32;<emphasis role="comment">//&#32;Clear&#32;dealt&#32;cards&#32;when&#32;reinitializing</emphasis>
+<anchor xml:id="__deck_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;deck&#32;=&#32;0;&#32;deck&#32;&lt;&#32;numDecks;&#32;++deck)&#32;{
+<anchor xml:id="__deck_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;suit&#32;=&#32;0;&#32;suit&#32;&lt;&#32;4;&#32;++suit)&#32;{
+<anchor xml:id="__deck_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;value&#32;=&#32;1;&#32;value&#32;&lt;=&#32;13;&#32;++value)&#32;{
+<anchor xml:id="__deck_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cards.push_back(T(value,&#32;<emphasis role="keyword">static_cast&lt;</emphasis>typename&#32;T::Suit<emphasis role="keyword">&gt;</emphasis>(suit)));
+<anchor xml:id="__deck_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00127"/>00127 }
+<anchor xml:id="__deck_8h_source_1l00128"/>00128 
+<anchor xml:id="__deck_8h_source_1l00129"/>00129 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00130"/><link linkend="_class_deck_1a64897016baf6e1c48f632dcc807096e7">00130</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_deck_1a64897016baf6e1c48f632dcc807096e7">Deck&lt;T&gt;::shuffle</link>()&#32;{
+<anchor xml:id="__deck_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;std::random_shuffle(cards.begin(),&#32;cards.end());&#32;&#32;<emphasis role="comment">//&#32;Changed&#32;to&#32;random_shuffle</emphasis>
+<anchor xml:id="__deck_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;dealtCards.clear();&#32;&#32;<emphasis role="comment">//&#32;Clear&#32;dealt&#32;cards&#32;tracking&#32;when&#32;shuffling</emphasis>
+<anchor xml:id="__deck_8h_source_1l00133"/>00133 }
+<anchor xml:id="__deck_8h_source_1l00134"/>00134 
+<anchor xml:id="__deck_8h_source_1l00135"/>00135 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00136"/><link linkend="_class_deck_1a08384299dc4e9ebdf3d10db7ef118753">00136</link> T&#32;<link linkend="_class_deck_1a08384299dc4e9ebdf3d10db7ef118753">Deck&lt;T&gt;::drawCard</link>()&#32;{
+<anchor xml:id="__deck_8h_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isEmpty())&#32;{
+<anchor xml:id="__deck_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Deck&#32;is&#32;empty!&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__deck_8h_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;T();&#32;
+<anchor xml:id="__deck_8h_source_1l00140"/>00140 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00141"/>00141 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;T&#32;card&#32;=&#32;cards.back();
+<anchor xml:id="__deck_8h_source_1l00143"/>00143 &#32;&#32;&#32;&#32;cards.pop_back();
+<anchor xml:id="__deck_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;for&#32;duplicates</emphasis>
+<anchor xml:id="__deck_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&amp;&#32;dealtCard&#32;:&#32;dealtCards)&#32;{
+<anchor xml:id="__deck_8h_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(card&#32;==&#32;dealtCard)&#32;{
+<anchor xml:id="__deck_8h_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Reinitialize&#32;deck&#32;if&#32;duplicate&#32;found</emphasis>
+<anchor xml:id="__deck_8h_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;initializeDeck(6);
+<anchor xml:id="__deck_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;shuffle();
+<anchor xml:id="__deck_8h_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;drawCard();
+<anchor xml:id="__deck_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00154"/>00154 &#32;&#32;&#32;&#32;
+<anchor xml:id="__deck_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;dealtCards.push_back(card);
+<anchor xml:id="__deck_8h_source_1l00156"/>00156 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;card;
+<anchor xml:id="__deck_8h_source_1l00157"/>00157 }
+<anchor xml:id="__deck_8h_source_1l00158"/>00158 
+<anchor xml:id="__deck_8h_source_1l00159"/>00159 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00160"/><link linkend="_class_deck_1a2b221bd7933edfaeb7c9ede9030f29dc">00160</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_deck_1a2b221bd7933edfaeb7c9ede9030f29dc">Deck&lt;T&gt;::isEmpty</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+<anchor xml:id="__deck_8h_source_1l00161"/>00161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;cards.empty();
+<anchor xml:id="__deck_8h_source_1l00162"/>00162 }
+<anchor xml:id="__deck_8h_source_1l00163"/>00163 
+<anchor xml:id="__deck_8h_source_1l00164"/>00164 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00165"/><link linkend="_class_deck_1ae5b40fb689e6ad018b541e8c6a78b4c4">00165</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_deck_1ae5b40fb689e6ad018b541e8c6a78b4c4">Deck&lt;T&gt;::remainingCards</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+<anchor xml:id="__deck_8h_source_1l00166"/>00166 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;cards.size();
+<anchor xml:id="__deck_8h_source_1l00167"/>00167 }
+<anchor xml:id="__deck_8h_source_1l00168"/>00168 
+<anchor xml:id="__deck_8h_source_1l00169"/>00169 <emphasis role="comment">//&#32;Copy&#32;constructor</emphasis>
+<anchor xml:id="__deck_8h_source_1l00170"/>00170 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00171"/><link linkend="_class_deck_1abb77cc39bbcab549f48a922e77019725">00171</link> <link linkend="_class_deck_1a7cb6b63b067cdaf3de1baeb5534d7271">Deck&lt;T&gt;::Deck</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_deck">Deck</link>&amp;&#32;other)&#32;:&#32;gen(rd())&#32;{
+<anchor xml:id="__deck_8h_source_1l00172"/>00172 &#32;&#32;&#32;&#32;cards&#32;=&#32;other.cards;
+<anchor xml:id="__deck_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;dealtCards&#32;=&#32;other.dealtCards;
+<anchor xml:id="__deck_8h_source_1l00174"/>00174 }
+<anchor xml:id="__deck_8h_source_1l00175"/>00175 
+<anchor xml:id="__deck_8h_source_1l00176"/>00176 <emphasis role="comment">//&#32;Assignment&#32;operator</emphasis>
+<anchor xml:id="__deck_8h_source_1l00177"/>00177 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00178"/><link linkend="_class_deck_1a94f54672e990b364ccb0f7024d960234">00178</link> <link linkend="_class_deck">Deck&lt;T&gt;</link>&amp;&#32;<link linkend="_class_deck_1a94f54672e990b364ccb0f7024d960234">Deck&lt;T&gt;::operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_deck">Deck</link>&amp;&#32;other)&#32;{
+<anchor xml:id="__deck_8h_source_1l00179"/>00179 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">this</emphasis>&#32;!=&#32;&amp;other)&#32;{
+<anchor xml:id="__deck_8h_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cards&#32;=&#32;other.cards;
+<anchor xml:id="__deck_8h_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dealtCards&#32;=&#32;other.dealtCards;
+<anchor xml:id="__deck_8h_source_1l00182"/>00182 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__deck_8h_source_1l00184"/>00184 }
+<anchor xml:id="__deck_8h_source_1l00185"/>00185 
+<anchor xml:id="__deck_8h_source_1l00186"/>00186 <emphasis role="comment">//&#32;Destructor</emphasis>
+<anchor xml:id="__deck_8h_source_1l00187"/>00187 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00188"/><link linkend="_class_deck_1ab3294d971f9ecf25fd92d982aa2efad9">00188</link> <link linkend="_class_deck_1ab3294d971f9ecf25fd92d982aa2efad9">Deck&lt;T&gt;::~Deck</link>()&#32;{
+<anchor xml:id="__deck_8h_source_1l00189"/>00189 &#32;&#32;&#32;&#32;cards.clear();
+<anchor xml:id="__deck_8h_source_1l00190"/>00190 &#32;&#32;&#32;&#32;dealtCards.clear();
+<anchor xml:id="__deck_8h_source_1l00191"/>00191 }
+<anchor xml:id="__deck_8h_source_1l00192"/>00192 
+<anchor xml:id="__deck_8h_source_1l00193"/>00193 <emphasis role="comment">//&#32;Subscript&#32;operator</emphasis>
+<anchor xml:id="__deck_8h_source_1l00194"/>00194 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__deck_8h_source_1l00195"/><link linkend="_class_deck_1a05ea3a7fa0b033dc9d7b984c7a51effe">00195</link> T&#32;<link linkend="_class_deck_1a05ea3a7fa0b033dc9d7b984c7a51effe">Deck&lt;T&gt;::operator[]</link>(<emphasis role="keywordtype">int</emphasis>&#32;index)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+<anchor xml:id="__deck_8h_source_1l00196"/>00196 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(index&#32;&lt;&#32;0&#32;||&#32;index&#32;&gt;=&#32;cards.size())&#32;{
+<anchor xml:id="__deck_8h_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Index&#32;out&#32;of&#32;range&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__deck_8h_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;T();&#32;
+<anchor xml:id="__deck_8h_source_1l00199"/>00199 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__deck_8h_source_1l00200"/>00200 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;cards[index];
+<anchor xml:id="__deck_8h_source_1l00201"/>00201 }
+<anchor xml:id="__deck_8h_source_1l00202"/>00202 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;DECK_H</emphasis>
+</programlisting></section>
